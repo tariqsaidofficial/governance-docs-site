@@ -1,0 +1,3 @@
+[submodule "content/eatgf-framework"]
+	path = content/eatgf-framework
+	url = https://github.com/tariqsaidofficial/eatgf-framework.git
