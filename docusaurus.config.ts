@@ -3,8 +3,8 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'Enterprise Governance Framework',
-  tagline: 'Professional governance, at any scale',
+  title: 'Enterprise AI-Aligned Technical Governance Framework (EATGF)',
+  tagline: 'Professional governance aligned with AI systems, at any scale',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -77,7 +77,7 @@ const config: Config = {
           position: 'left'
         },
         {
-          href: 'https://github.com/tariqsaidofficial/enterprise-governance-framework',
+          href: 'https://github.com/tariqsaidofficial/eatgf-framework',
           label: 'GitHub (Source)',
           position: 'right',
         },
@@ -138,7 +138,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `© ${new Date().getFullYear()} Enterprise Governance Framework. All rights reserved.`,
+      copyright: `© ${new Date().getFullYear()} Enterprise AI-Aligned Technical Governance Framework (EATGF). All rights reserved.`,
     },
     prism: {
       theme: prismThemes.github,

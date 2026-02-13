@@ -1,13 +1,13 @@
-# Welcome to Enterprise Governance Framework
+# Welcome to Enterprise AI-Aligned Technical Governance Framework (EATGF)
 
-The **Enterprise Governance Framework** provides professional-grade governance standards that scale from startups to enterprises.
+The **Enterprise AI-Aligned Technical Governance Framework (EATGF)** is a vendor-neutral, audit-defensible governance standard that scales from startups to enterprises, with built-in alignment to AI systems and technical governance.
 
 ## 🚀 Quick Start
 
 Get started in 3 steps:
 
-1. **[Understand the Charter](./framework/charter.md)** - Learn governance principles
-2. **[Choose Your Edition](./guides/choosing-edition.md)** - Startup, SaaS, or Enterprise
+1. **[Understand the Charter](./framework/charter.md)** - Learn EATGF governance principles
+2. **[Choose Your Edition](./guides/choosing-edition.md)** - Startup, SaaS, or Enterprise edition
 3. **[Implement Controls](./framework/controls.md)** - Deploy governance in your organization
 
 ## 📋 What's Included

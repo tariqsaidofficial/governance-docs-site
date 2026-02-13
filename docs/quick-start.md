@@ -1,12 +1,12 @@
-# Quick Start Guide
+# Quick Start Guide – Enterprise AI-Aligned Technical Governance Framework (EATGF)
 
-Get your governance framework up and running in the next 30 days.
+Get your EATGF governance framework up and running in the next 30 days.
 
 ## Week 1: Foundation (4 hours)
 
-### Step 1: Understand the Framework (30 min)
+### Step 1: Understand EATGF (30 min)
 - [ ] Read [Governance Charter](./framework/charter.md)
-- [ ] Review your [organization edition](./guides/choosing-edition.md)
+- [ ] Review your [EATGF edition](./guides/choosing-edition.md) (Startup, SaaS, or Enterprise)
 - [ ] Skim [Control Objectives](./framework/controls.md)
 
 ### Step 2: Form Governance Team (30 min)
