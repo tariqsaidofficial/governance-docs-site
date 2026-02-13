@@ -47,6 +47,7 @@ const config: Config = {
           path: 'docs',
           routeBasePath: '/',
           sidebarPath: './sidebars.ts',
+          numberPrefixParser: false,
           remarkPlugins: [],
           rehypePlugins: [],
           // Please change this to your repo.
@@ -93,7 +94,7 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Tutorial',
+          label: 'Framework',
         },
         {to: '/blog', label: 'Blog', position: 'left'},
         {
@@ -110,8 +111,8 @@ const config: Config = {
           title: 'Docs',
           items: [
             {
-              label: 'Tutorial',
-              to: '/docs/intro',
+              label: 'Introduction',
+              to: '/intro',
             },
           ],
         },
