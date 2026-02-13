@@ -1,6 +1,0 @@
-[submodule "content/eatgf-framework"]
-	path = content/eatgf-framework
-	url = https://github.com/tariqsaidofficial/eatgf-framework.git
-[submodule "portal/docs/eatgf-framework"]
-	path = portal/docs/eatgf-framework
-	url = https://github.com/tariqsaidofficial/eatgf-framework.git
