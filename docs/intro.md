@@ -2,7 +2,7 @@
 
 The **Enterprise AI-Aligned Technical Governance Framework (EATGF)** is a vendor-neutral, audit-defensible governance standard that scales from startups to enterprises, with built-in alignment to AI systems and technical governance.
 
-## 🚀 Quick Start
+##  Quick Start
 
 Get started in 3 steps:
 
@@ -10,7 +10,7 @@ Get started in 3 steps:
 2. **[Choose Your Edition](./guides/choosing-edition.md)** - Startup, SaaS, or Enterprise edition
 3. **[Implement Controls](./framework/controls.md)** - Deploy governance in your organization
 
-## 📋 What's Included
+##  What's Included
 
 ### Framework Foundation
 - **Governance Charter** - Strategic direction and principles
@@ -31,7 +31,7 @@ Get started in 3 steps:
 - **ISO 42001** - AI management
 - **OWASP** - API security
 
-## 🎯 By Organization Size
+##  By Organization Size
 
 ### [Startup Edition (1-10 people)](./guides/startup-edition.md)
 Lightweight, practical governance that doesn't slow product delivery.
@@ -54,21 +54,21 @@ Enterprise-grade governance with distributed accountability.
 - Executive oversight committee
 - 8-12 person governance team
 
-## 💡 Key Features
+##  Key Features
 
-✅ **COBIT 2019 Aligned** - Uses industry-standard governance framework
+ **COBIT 2019 Aligned** - Uses industry-standard governance framework
 
-✅ **Scalable** - Grows with your organization from startup to enterprise
+ **Scalable** - Grows with your organization from startup to enterprise
 
-✅ **Practical** - Real-world templates, checklists, and examples
+ **Practical** - Real-world templates, checklists, and examples
 
-✅ **Multi-Standard** - Maps to ISO 27001, ISO 38500, ISO 42001, OWASP
+ **Multi-Standard** - Maps to ISO 27001, ISO 38500, ISO 42001, OWASP
 
-✅ **Risk-Based** - Prioritizes controls by impact and likelihood
+ **Risk-Based** - Prioritizes controls by impact and likelihood
 
-✅ **Evidence-Ready** - Built-in compliance documentation templates
+ **Evidence-Ready** - Built-in compliance documentation templates
 
-## 📊 Framework Domains
+##  Framework Domains
 
 The framework is organized around **5 COBIT Domains**:
 
@@ -80,7 +80,7 @@ The framework is organized around **5 COBIT Domains**:
 | **DSS** | Deliver, Service, Support | Operations, security, incident response |
 | **MEA** | Monitor, Evaluate, Assess | Performance measurement, compliance |
 
-## 🛠️ Core Control Areas
+##  Core Control Areas
 
 1. **Architecture Controls** - System design and integration standards
 2. **Security Controls** - Identity, encryption, vulnerability management
@@ -89,7 +89,7 @@ The framework is organized around **5 COBIT Domains**:
 5. **Risk Management Controls** - Risk identification and mitigation
 6. **Performance Controls** - KPI definition and measurement
 
-## 📖 Documentation Structure
+##  Documentation Structure
 
 - **Getting Started** - Introduction and quick-start guides
 - **Framework Documentation** - Detailed control and policy documents
@@ -97,13 +97,13 @@ The framework is organized around **5 COBIT Domains**:
 - **Assessment Tools** - Maturity models and risk frameworks
 - **Evidence Templates** - Compliance documentation
 
-## 🔗 Companion Repository
+##  Companion Repository
 
 **Source of Truth:** https://github.com/tariqsaidofficial/enterprise-governance-framework
 
 This documentation site pulls from the authoritative source repository. For latest updates, visit the GitHub repo.
 
-## ❓ Common Questions
+##  Common Questions
 
 **Q: How long does it take to implement?**  
 A: Startup edition (2 weeks), SaaS edition (2-3 months), Enterprise edition (4-6 months)
@@ -117,7 +117,7 @@ A: Yes - these are guidelines. Tailor to your organization's specific needs.
 **Q: How do we measure success?**  
 A: Use the maturity model and KPI dashboard to track progress quarterly.
 
-## 🎓 Next Steps
+##  Next Steps
 
 1. Read the [Governance Charter](./framework/charter.md)
 2. Take the [Maturity Assessment](./assessment/maturity-model.md)
@@ -128,5 +128,5 @@ A: Use the maturity model and KPI dashboard to track progress quarterly.
 ---
 
 **Questions?**  
-📧 governance@enterprise.com  
-🔗 GitHub: https://github.com/tariqsaidofficial/enterprise-governance-framework
+ governance@enterprise.com  
+ GitHub: https://github.com/tariqsaidofficial/enterprise-governance-framework

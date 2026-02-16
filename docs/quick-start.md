@@ -86,18 +86,18 @@ Get your EATGF governance framework up and running in the next 30 days.
 
 ## Success Criteria
 
-✅ **Governance Foundation Established**
+ **Governance Foundation Established**
 - [ ] Risk register in place
 - [ ] Policies communicated
 - [ ] Governance council meeting regularly
 
-✅ **Core Controls Active**
+ **Core Controls Active**
 - [ ] Access control working
 - [ ] Data encrypted
 - [ ] Vulnerabilities monitored
 - [ ] Incidents can be responded to
 
-✅ **Measurement In Place**
+ **Measurement In Place**
 - [ ] KPIs being tracked
 - [ ] Monthly reports
 - [ ] Executive visibility
