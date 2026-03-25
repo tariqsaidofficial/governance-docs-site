@@ -116,6 +116,7 @@ const config: Config = {
           position: 'left',
           label: 'Framework',
         },
+        {to: '/assess', label: 'Assessment', position: 'left'},
         {to: '/blog', label: 'Blog', position: 'left'},
         {
           href: 'https://github.com/tariqsaidofficial/eatgf-framework',

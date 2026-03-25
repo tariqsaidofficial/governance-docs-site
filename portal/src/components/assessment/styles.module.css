@@ -1,0 +1,97 @@
+.wrap {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 2rem 1rem 3rem;
+}
+
+.card {
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 12px;
+  padding: 1rem;
+  background: var(--ifm-background-surface-color);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.75rem;
+}
+
+.formRow {
+  margin-bottom: 1rem;
+}
+
+.label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-weight: 600;
+}
+
+.input,
+.select {
+  width: 100%;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 8px;
+  padding: 0.55rem 0.7rem;
+  background: var(--ifm-background-color);
+  color: var(--ifm-font-color-base);
+}
+
+.controlsTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.75rem;
+}
+
+.controlsTable th,
+.controlsTable td {
+  padding: 0.6rem;
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+  vertical-align: top;
+  text-align: left;
+}
+
+.inlineActions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.15rem 0.45rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.statusCompliant {
+  background: #d6f5e7;
+  color: #0d6b42;
+}
+
+.statusNonCompliant {
+  background: #fde0df;
+  color: #a0261d;
+}
+
+.statusPartial {
+  background: #fff2cc;
+  color: #856404;
+}
+
+.statusNotTested {
+  background: #eef0f3;
+  color: #49505a;
+}
+
+.statusNotApplicable {
+  background: #f2f4f7;
+  color: #5c6570;
+}
+
+.error {
+  margin-top: 0.75rem;
+  color: #b42318;
+}
