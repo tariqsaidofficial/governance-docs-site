@@ -48,6 +48,10 @@ python -m eatgf_engine.cli.main evaluate-compliance registry_v1.1.json org_profi
 
 Validation is fail-fast. Missing fields or invalid values stop execution with explicit error messages.
 
+## evidence_metrics (v1.1)
+
+`evidence_metrics` is optional, ignored in v1.1 scoring/reporting, and reserved for v1.2+.
+
 ## GitHub Repository
 
 [EATGF Engine on GitHub](https://github.com/tariqsaidofficial/eatgf-engine)

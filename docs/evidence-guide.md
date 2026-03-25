@@ -53,7 +53,7 @@ python -m eatgf_engine.cli.main evaluate-compliance registry_v1.1.json org_profi
 
 ## About `evidence_metrics`
 
-`evidence_metrics` is reserved for future expansion and is not required for v1.1 baseline adoption.
+`evidence_metrics` is optional, ignored in v1.1 scoring, and reserved for future expansion (v1.2+).
 
 ## Templates
 
