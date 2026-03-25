@@ -24,9 +24,9 @@ Get started in 3 steps:
 
 ### Specialized Domains
 
-- **[AI Governance](./special/ai-governance.md)** - Manage AI/ML systems responsibly
-- **[API Governance](./special/api-governance.md)** - Secure API lifecycle
-- **[Data Governance](./special/data-governance.md)** - Manage data as strategic asset
+- **[AI Governance](https://github.com/tariqsaidofficial/eatgf-framework/blob/main/05_DOMAIN_FRAMEWORKS/AI_GOVERNANCE_FRAMEWORK.md)** - Manage AI/ML systems responsibly
+- **[API Governance](https://github.com/tariqsaidofficial/eatgf-framework/blob/main/05_DOMAIN_FRAMEWORKS/API_GOVERNANCE_FRAMEWORK.md)** - Secure API lifecycle
+- **[Data Governance](https://github.com/tariqsaidofficial/eatgf-framework/blob/main/04_POLICY_LAYER/03_DATA_GOVERNANCE_POLICY.md)** - Manage data as strategic asset
 
 ### Framework Compliance
 
@@ -84,7 +84,7 @@ The operational v1.1 engine currently evaluates controls in **EDM** and **DSS**,
 
 ## Companion Repository
 
-**Source of Truth:** <https://github.com/tariqsaidofficial/enterprise-governance-framework>
+**Source of Truth:** <https://github.com/tariqsaidofficial/eatgf-framework>
 
 This documentation site pulls from the authoritative source repository. For latest updates, visit the GitHub repo.
 
@@ -104,14 +104,14 @@ A: Use the maturity model and KPI dashboard to track progress quarterly.
 
 ## Next Steps
 
-1. Read the [Governance Charter](./framework/charter.md)
-2. Take the [Maturity Assessment](./assessment/maturity-model.md)
-3. Choose your [implementation edition](./guides/choosing-edition.md)
-4. Review [control objectives](./framework/controls.md) for your domain
-5. Start with [quick wins](./guides/quick-wins.md)
+1. Read [Governance Charter](https://github.com/tariqsaidofficial/eatgf-framework/blob/main/04_POLICY_LAYER/01_GOVERNANCE_CHARTER.md)
+2. Review [Maturity Assessment](https://github.com/tariqsaidofficial/eatgf-framework/blob/main/03_GOVERNANCE_MODELS/MATURITY_MODEL/MATURITY_ASSESSMENT.md)
+3. Continue with [Quick Start](./quick-start.md)
+4. Review [Control Objectives](https://github.com/tariqsaidofficial/eatgf-framework/blob/main/02_CONTROL_ARCHITECTURE/CONTROL_OBJECTIVES.md)
+5. Run [Engine Guide](./engine.md)
 
 ---
 
 **Questions?**
- <governance@enterprise.com>
- GitHub: <https://github.com/tariqsaidofficial/enterprise-governance-framework>
+<governance@enterprise.com>
+GitHub: <https://github.com/tariqsaidofficial/eatgf-framework>

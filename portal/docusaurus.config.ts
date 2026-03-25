@@ -75,6 +75,21 @@ const config: Config = {
     ],
   ],
 
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'guides',
+        path: '../docs',
+        routeBasePath: 'docs',
+        sidebarPath: '../sidebars.ts',
+        numberPrefixParser: false,
+        editUrl:
+          'https://github.com/tariqsaidofficial/governance-docs-site/tree/main/',
+      },
+    ],
+  ],
+
   themeConfig: {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
@@ -88,6 +103,13 @@ const config: Config = {
         src: 'img/logo.svg',
       },
       items: [
+        {
+          type: 'docSidebar',
+          docsPluginId: 'guides',
+          sidebarId: 'docsSidebar',
+          position: 'left',
+          label: 'Getting Started',
+        },
         {
           type: 'docSidebar',
           sidebarId: 'frameworkSidebar',
