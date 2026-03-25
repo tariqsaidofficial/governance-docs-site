@@ -38,6 +38,16 @@ python -m eatgf_engine.cli.main evaluate-compliance registry_v1.1.json org_profi
 - evidence templates: `docs/templates/evidence.blank.json`, `docs/templates/evidence.example.json`
 - usage guide: [Evidence Guide](./evidence-guide.md)
 
+## org_profile Contract (v1.1)
+
+`org_profile.json` must contain all fields below:
+
+- `environment` (allowed values only: `Cloud`, `SaaS`, `On-Prem`, `Hybrid`)
+- `ai_usage` (boolean only: `true` or `false`)
+- `apis_exposed` (boolean only: `true` or `false`)
+
+Validation is fail-fast. Missing fields or invalid values stop execution with explicit error messages.
+
 ## GitHub Repository
 
 [EATGF Engine on GitHub](https://github.com/tariqsaidofficial/eatgf-engine)

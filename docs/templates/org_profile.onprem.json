@@ -1,5 +1,5 @@
 {
-  "environment": "OnPrem",
+  "environment": "On-Prem",
   "ai_usage": false,
   "apis_exposed": false
 }
