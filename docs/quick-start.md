@@ -1,134 +1,74 @@
 # Quick Start Guide – Enterprise AI-Aligned Technical Governance Framework (EATGF)
 
-Get your EATGF governance framework up and running in the next 30 days.
+Get your EATGF v1.1 governance workflow running quickly with deterministic evaluation and evidence-ready outputs.
 
-## Week 1: Foundation (4 hours)
+## Phase 1: Setup (30-45 min)
 
-### Step 1: Understand EATGF (30 min)
-- [ ] Read [Governance Charter](./framework/charter.md)
-- [ ] Review your [EATGF edition](./guides/choosing-edition.md) (Startup, SaaS, or Enterprise)
-- [ ] Skim [Control Objectives](./framework/controls.md)
+### Step 1: Understand Core Artifacts
 
-### Step 2: Form Governance Team (30 min)
-- [ ] Assign governance lead/CISO
-- [ ] Create 3-5 person governance council (if applicable)
-- [ ] Schedule first governance meeting
+- [ ] Read [Engine Overview](./engine.md)
+- [ ] Read [Whitepaper v1.1](./whitepaper.md)
+- [ ] Read [Annex v1.1](./annex.md)
 
-### Step 3: Risk Assessment (2 hours)
-- [ ] Identify top 10 organizational risks
-- [ ] Create [risk register](../framework/risk.md) (spreadsheet)
-- [ ] Get executive buy-in for mitigation plans
+### Step 2: Prepare Input Files
 
-### Step 4: Core Policies (1 hour)
-- [ ] Review policy templates (see [Evidence Templates](../templates/evidence-overview.md))
-- [ ] Customize for your organization
-- [ ] Get executive approval
+- [ ] Choose org profile template:
+  - `docs/templates/org_profile.saas.json`
+  - `docs/templates/org_profile.onprem.json`
+- [ ] Start from `docs/templates/evidence.blank.json`
+- [ ] Use `docs/templates/evidence.example.json` as reference
 
-**Week 1 Deliverable:** Risk register + draft policies
+### Step 3: Fill Evidence Correctly
 
----
+- [ ] Follow [Evidence Guide](./evidence-guide.md)
+- [ ] Use only supported statuses:
+  - `COMPLIANT`
+  - `NON_COMPLIANT`
+  - `PARTIAL`
+  - `NOT_TESTED`
 
-## Week 2-3: Implementation (8 hours)
-
-### Step 5: Policy Rollout (2 hours)
-- [ ] Communicate policies to team
-- [ ] Create acknowledgment process
-- [ ] Track compliance (75%+ target)
-
-### Step 6: Control Baseline (3 hours)
-- [ ] Document current security practices
-- [ ] Identify control gaps
-- [ ] Create action plan for critical gaps
-
-### Step 7: Quick Wins (3 hours)
-- [ ] Implement 3-5 low-effort high-impact controls:
-  - [ ] Enable multi-factor authentication
-  - [ ] Encrypt sensitive data
-  - [ ] Create basic access control process
-  - [ ] Set up vulnerability scanning
-  - [ ] Document system architecture
-
-**Week 2-3 Deliverable:** Baseline assessment + quick wins implemented
+**Phase 1 Deliverable:** `org_profile.json` + `evidence.json`
 
 ---
 
-## Week 4: Planning (2 hours)
+## Phase 2: Run Engine (10 min)
 
-### Step 8: Create Governance Roadmap (2 hours)
-- [ ] Map out 12-month implementation plan
-- [ ] Prioritize controls by risk/effort
-- [ ] Align with business roadmap
-- [ ] Assign owners and timelines
+### Step 4: Validate Registry
 
-**Week 4 Deliverable:** Governance roadmap (Q1-Q4)
+```bash
+python -m eatgf_engine.cli.main validate-registry registry_v1.1.json
+```
 
----
+### Step 5: Evaluate Compliance
 
-## Post-Launch: Monthly Activities
+```bash
+python -m eatgf_engine.cli.main evaluate-compliance registry_v1.1.json org_profile.json evidence.json --output-json compliance_report.json
+```
 
-### Month 2: Monitoring
-- [ ] Implement KPI dashboard
-- [ ] Monthly governance review
-- [ ] Track control implementation progress
-
-### Month 3: Assessment
-- [ ] Conduct [maturity assessment](../assessment/maturity-model.md)
-- [ ] Identify improvement areas
-- [ ] Plan adjustments for next quarter
-
-### Months 4-12: Continuous Improvement
-- [ ] Quarterly governance reviews
-- [ ] Control testing & validation
-- [ ] Risk dashboard updates
-- [ ] Semi-annual compliance audit
+**Phase 2 Deliverable:** deterministic terminal output + `compliance_report.json`
 
 ---
 
-## Success Criteria
+## Phase 3: Regression Safety Check (5 min)
 
- **Governance Foundation Established**
-- [ ] Risk register in place
-- [ ] Policies communicated
-- [ ] Governance council meeting regularly
+Run the v1.1 CI-equivalent checks locally:
 
- **Core Controls Active**
-- [ ] Access control working
-- [ ] Data encrypted
-- [ ] Vulnerabilities monitored
-- [ ] Incidents can be responded to
+```bash
+python -m eatgf_engine.cli.main evaluate-compliance registry_v1.1.json org_profile.json tests/ci_zero_evidence.json
+python -m eatgf_engine.cli.main evaluate-compliance registry_v1.1.json org_profile.json tests/ci_invalid_status.json && exit 1 || exit 0
+```
 
- **Measurement In Place**
-- [ ] KPIs being tracked
-- [ ] Monthly reports
-- [ ] Executive visibility
+Expected behavior:
+
+- Zero evidence should return score `0.0%` without crash.
+- Invalid status should fail fast.
 
 ---
 
-## Resource Checklist
+## Useful Links
 
-**Documents You'll Need:** See [Evidence Templates](../templates/evidence-overview.md)
+- [EATGF Engine Repository](https://github.com/tariqsaidofficial/eatgf-engine)
+- [EATGF Framework Repository](https://github.com/tariqsaidofficial/eatgf-framework)
+- [Governance Docs Portal Repository](https://github.com/tariqsaidofficial/governance-docs-site)
 
-**Tools You'll Need:**
-- Documentation system (Wiki/SharePoint)
-- Policy management (Confluence/GitHub)
-- Risk tracking (Spreadsheet or AuditBoard)
-- Access control system (Okta/Auth0 for SaaS+)
-
-**People You'll Need:**
-- 1 governance lead (10-20 hours/week)
-- Domain experts (5 hours/week each)
-- Executive sponsor (10 hours/month)
-
----
-
-## Quick Links
-
-- [Risk Framework](../framework/risk.md)
-- [Control Objectives](../framework/controls.md)
-- [Evidence Templates](../templates/evidence-overview.md)
-- [Maturity Model](../assessment/maturity-model.md)
-- [Implementation by Edition](../guides/startup-edition.md)
-
----
-
-**Getting stuck?** See [FAQ](./faq.md) or contact governance@enterprise.com
+The quick-start is intentionally focused on v1.1 operational clarity. v1.2 planning (Strict Mode / BAI) starts only after this baseline is fully adopted.

@@ -1,0 +1,5 @@
+{
+  "environment": "OnPrem",
+  "ai_usage": false,
+  "apis_exposed": false
+}

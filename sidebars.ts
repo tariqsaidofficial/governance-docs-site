@@ -15,6 +15,10 @@ const sidebars: SidebarsConfig = {
       items: [
         'intro',
         'quick-start',
+        'engine',
+        'evidence-guide',
+        'whitepaper',
+        'annex',
       ],
     },
   ],

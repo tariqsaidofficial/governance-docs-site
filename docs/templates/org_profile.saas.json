@@ -1,0 +1,5 @@
+{
+  "environment": "SaaS",
+  "ai_usage": true,
+  "apis_exposed": true
+}

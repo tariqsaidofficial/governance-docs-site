@@ -1,0 +1,11 @@
+{
+  "EATGF-EDM-GOV-01": {"status": "COMPLIANT"},
+  "EATGF-EDM-RISK-01": {"status": "COMPLIANT"},
+  "EATGF-EDM-BEN-01": {"status": "PARTIAL"},
+  "EATGF-AI-RISK-01": {"status": "NOT_TESTED"},
+  "EATGF-DSS-SEC-01": {"status": "COMPLIANT"},
+  "EATGF-DSS-ENC-01": {"status": "COMPLIANT"},
+  "EATGF-DSS-VULN-01": {"status": "NON_COMPLIANT"},
+  "EATGF-DSS-INC-01": {"status": "COMPLIANT"},
+  "EATGF-API-SEC-01": {"status": "COMPLIANT"}
+}
