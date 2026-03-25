@@ -59,17 +59,20 @@
 ## Installation
 
 ### Prerequisites
+
 - Node.js 16.14+
 - npm or yarn
 
 ### Steps
 
 1. **Navigate to project:**
+
    ```bash
    cd governance-docs-site
    ```
 
 2. **Install dependencies:**
+
    ```bash
    npm install
    # or
@@ -77,20 +80,23 @@
    ```
 
 3. **Start development server:**
+
    ```bash
    npm start
    # or
    yarn start
    ```
-   
-   The site will open at http://localhost:3000
+
+   The site will open at <http://localhost:3000>
 
 4. **Build for production:**
+
    ```bash
    npm run build
    ```
 
 5. **Serve locally (after build):**
+
    ```bash
    npm run serve
    ```
@@ -121,9 +127,11 @@ governance-docs-site/
 ### Content Sync
 
 Documentation is synced from the main repository:
-- https://github.com/tariqsaidofficial/enterprise-governance-framework
+
+- <https://github.com/tariqsaidofficial/enterprise-governance-framework>
 
 **To update docs locally:**
+
 1. Sync files from main repo
 2. Update sidebars.ts if structure changes
 3. Run `npm start` to preview
@@ -134,12 +142,14 @@ Documentation is synced from the main repository:
 ### GitHub Pages
 
 1. Update `docusaurus.config.ts`:
+
    ```typescript
    organizationName: 'your-org',
    projectName: 'governance-docs-site',
    ```
 
 2. Deploy:
+
    ```bash
    npm run deploy
    ```
@@ -161,6 +171,7 @@ CMD ["serve", "-s", "build", "-l", "3000"]
 ```
 
 Build and run:
+
 ```bash
 docker build -t governance-docs-site .
 docker run -p 3000:3000 governance-docs-site
@@ -175,4 +186,15 @@ docker run -p 3000:3000 governance-docs-site
 
 ---
 
-**Learn more:** https://docusaurus.io/docs
+---
+
+**Learn more:** <https://docusaurus.io/docs>
+
+---
+
+## Related Projects
+
+| Repository | Role | Status |
+|---|---|---|
+| [eatgf-framework](https://github.com/tariqsaidofficial/eatgf-framework) | Framework Knowledge Centre | v1.0 Foundation |
+| [eatgf-engine](https://github.com/tariqsaidofficial/eatgf-engine) | Deterministic Compliance Engine | ![CI](https://github.com/tariqsaidofficial/eatgf-engine/actions/workflows/engine-ci.yml/badge.svg) |
