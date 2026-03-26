@@ -1,0 +1,37 @@
+/* File Purpose: Styles the final conversion panel and action controls at the end of landing. */
+.section {
+  padding: 1.6rem 0 4rem;
+  background: var(--eatgf-surface);
+}
+
+.panel {
+  border: 1px solid var(--eatgf-outline-soft);
+  border-radius: 1.05rem;
+  background: color-mix(in srgb, var(--eatgf-surface-mid) 86%, white 14%);
+  box-shadow: 0 12px 26px color-mix(in srgb, var(--eatgf-ink) 5%, transparent);
+  text-align: center;
+  padding: clamp(1.5rem, 4vw, 3rem);
+}
+
+.panel h2 {
+  margin: 0;
+  font-family: var(--eatgf-font-headline);
+  font-size: clamp(1.7rem, 3vw, 2.6rem);
+  font-weight: 800;
+  color: var(--eatgf-ink);
+}
+
+.panel p {
+  margin: 0.8rem auto 0;
+  max-width: 46rem;
+  color: var(--eatgf-muted-ink);
+  line-height: 1.75;
+}
+
+.actions {
+  margin-top: 1.2rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+}

@@ -1,12 +1,12 @@
 # EATGF Submodule Operations Guide
 
-**Repository:** governance-docs-site  
-**Submodule:** framework/ → https://github.com/tariqsaidofficial/eatgf-framework.git  
+**Repository:** governance-docs-site
+**Submodule:** framework/ → https://github.com/tariqsaidofficial/eatgf-framework.git
 **Architecture:** Authority Layer (eatgf-framework) ↔ Presentation Layer (governance-docs-site)
 
 ---
 
-## Architecture Overview
+## SECTION 01 - Architecture Overview
 
 ```
 governance-docs-site/          ← Presentation Repository
@@ -31,7 +31,7 @@ governance-docs-site/          ← Presentation Repository
 
 ---
 
-## 1. Initial Clone (New Developer Setup)
+## SECTION 02 - Initial Clone (New Developer Setup)
 
 When cloning governance-docs-site for the first time:
 
@@ -49,7 +49,7 @@ git submodule update
 
 ---
 
-## 2. Update Framework to Latest
+## SECTION 03 - Update Framework to Latest
 
 When `eatgf-framework` has been updated and you want the portal to reflect the latest changes:
 
@@ -69,7 +69,7 @@ This updates the submodule pointer in governance-docs-site to the latest commit 
 
 ---
 
-## 3. Pin Framework to a Specific Tag/Version
+## SECTION 04 - Pin Framework to a Specific Tag/Version
 
 To pin the framework to a specific release tag:
 
@@ -86,7 +86,7 @@ git push
 
 ---
 
-## 4. Versioning Strategy
+## SECTION 05 - Versioning Strategy
 
 ### Authority Repository (eatgf-framework)
 
@@ -123,7 +123,7 @@ This creates a versioned snapshot under `portal/versioned_docs/version-1.0/` tha
 
 ---
 
-## 5. Verify Build
+## SECTION 06 - Verify Build
 
 After any submodule update, always validate the portal builds cleanly:
 
@@ -136,7 +136,7 @@ Expected: `[SUCCESS] Generated static files in "build".` with no broken links or
 
 ---
 
-## 6. CI/CD Considerations
+## SECTION 07 - CI/CD Considerations
 
 For automated pipelines, ensure submodules are initialized:
 
@@ -156,18 +156,18 @@ steps:
 
 ---
 
-## 7. Troubleshooting
+## SECTION 08 - Troubleshooting
 
-| Issue | Resolution |
-|-------|-----------|
-| `framework/` directory is empty | Run `git submodule init && git submodule update` |
-| Build fails with "docs directory not found" | Ensure submodule is initialized and `../framework` exists |
-| Submodule points to wrong commit | Use `git submodule update --remote` to get latest, or checkout specific tag |
-| Merge conflicts in submodule pointer | Resolve by checking out desired commit in `framework/`, then `git add framework` |
+| Issue                                       | Resolution                                                                       |
+| ------------------------------------------- | -------------------------------------------------------------------------------- |
+| `framework/` directory is empty             | Run `git submodule init && git submodule update`                                 |
+| Build fails with "docs directory not found" | Ensure submodule is initialized and `../framework` exists                        |
+| Submodule points to wrong commit            | Use `git submodule update --remote` to get latest, or checkout specific tag      |
+| Merge conflicts in submodule pointer        | Resolve by checking out desired commit in `framework/`, then `git add framework` |
 
 ---
 
-## Architectural Constraints
+## SECTION 09 - Architectural Constraints
 
 - **NEVER** copy framework files into `portal/docs/`
 - **NEVER** modify framework content from the governance-docs-site repository

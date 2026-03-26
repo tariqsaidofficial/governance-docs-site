@@ -1,0 +1,35 @@
+/* File Purpose: Reusable visual style for landing feature cards and hover behavior. */
+.card {
+  display: block;
+  height: 100%;
+  border: 1px solid var(--eatgf-outline-soft);
+  border-radius: 1rem;
+  background: var(--eatgf-surface-high);
+  color: inherit;
+  text-decoration: none;
+  box-shadow: var(--eatgf-editorial-shadow);
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.card:hover {
+  color: inherit;
+  text-decoration: none;
+  transform: translateY(-2px);
+  border-color: var(--eatgf-primary);
+  box-shadow: var(--eatgf-hover-shadow);
+}
+
+.body {
+  padding: 1.5rem;
+}
+
+.body h3 {
+  color: var(--eatgf-ink);
+  margin-bottom: 0.75rem;
+}
+
+.body p {
+  color: var(--eatgf-muted-ink);
+  line-height: 1.75;
+  margin-bottom: 0;
+}

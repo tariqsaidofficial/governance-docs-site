@@ -1,0 +1,70 @@
+---
+slug: /whitepaper
+sidebar_position: 12
+title: Whitepaper v1.1
+sidebar_label: Whitepaper
+description: Canonical strategic reference for EATGF governance architecture, principles, and audit-aligned model design.
+---
+
+import DocMetaStrip from '@site/src/components/docs/DocMetaStrip';
+import DocCardGrid from '@site/src/components/docs/DocCardGrid';
+import DocCard from '@site/src/components/docs/DocCard';
+import DocSectionHeader from '@site/src/components/docs/DocSectionHeader';
+import DocChecklist, { DocChecklistItem } from '@site/src/components/docs/DocChecklist';
+import DocCallout from '@site/src/components/docs/DocCallout';
+import DocNextSteps from '@site/src/components/docs/DocNextSteps';
+
+<DocMetaStrip items={[
+	{ label: 'Artifact', value: 'Whitepaper v1.1' },
+	{ label: 'Role', value: 'Strategic Reference' },
+	{ label: 'Authority', value: 'Canonical source remains in framework repository' },
+]} />
+
+The official EATGF Whitepaper v1.1 is published in the framework repository.
+
+<DocCardGrid cols={2}>
+	<DocCard title="Canonical Source" description="Primary strategic reference for governance architecture, principles, and audit posture." href="https://github.com/tariqsaidofficial/eatgf-framework/blob/main/docs/whitepaper_v1.1.md" />
+	<DocCard title="Framework Repository" description="Browse the broader framework, layer model, and surrounding governance documentation." href="https://github.com/tariqsaidofficial/eatgf-framework" />
+</DocCardGrid>
+
+<DocSectionHeader number="01" label="Purpose and Position" description="Portal entry point for the strategic whitepaper artifact before operational rollout." />
+
+This page is the portal entry point for the strategic whitepaper artifact. Use it to understand the governance model before operational rollout.
+
+<DocSectionHeader number="02" label="Scope" description="The whitepaper defines the strategic model across the following areas." />
+
+- Governance architecture principles
+- Layer model and authority boundaries
+- Deterministic control philosophy
+- Audit traceability posture
+
+<DocSectionHeader number="03" label="Recommended Reading Flow" description="Read this before implementation decisions, then continue with the operational references below." />
+
+1. [Annex v1.1](./annex)
+2. [Quick Start](./quick-start)
+3. [Engine Guide](./engine)
+
+<DocSectionHeader number="04" label="Practical Use Cases" description="Where the whitepaper is most useful for governance and delivery teams." />
+
+- Architecture and policy baseline alignment
+- Executive governance briefings
+- Control model orientation for implementation teams
+- Audit planning and traceability preparation
+
+<DocSectionHeader number="05" label="Validation Checklist" description="Confirm strategic reading order and assumptions before execution begins." />
+
+<DocChecklist label="Readiness checks">
+	<DocChecklistItem>Canonical whitepaper link reachable</DocChecklistItem>
+	<DocChecklistItem>Reading order aligned with implementation phase</DocChecklistItem>
+	<DocChecklistItem>Strategic assumptions reviewed before execution</DocChecklistItem>
+</DocChecklist>
+
+<DocCallout type="info" title="Canonical source policy">
+This documentation portal references the whitepaper but does not supersede the canonical framework repository artifact.
+</DocCallout>
+
+<DocNextSteps steps={[
+	{ label: 'Annex v1.1', href: './annex', description: 'Move from strategic model to implementation interpretation.' },
+	{ label: 'Quick Start', href: './quick-start', description: 'Start the operational workflow after the strategic baseline is understood.' },
+	{ label: 'Engine Guide', href: './engine', description: 'Connect the model to deterministic evaluation and outputs.' },
+]} />

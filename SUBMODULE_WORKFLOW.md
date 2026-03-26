@@ -6,7 +6,7 @@
 
 ---
 
-## Overview
+## SECTION 01 - Overview
 
 The `eatgf-framework` repository is maintained as a **Git submodule** within the `governance-docs-site` repository at the path `framework/`.
 
@@ -18,7 +18,7 @@ This enforces a **single source of truth** principle:
 
 ---
 
-## Submodule Configuration
+## SECTION 02 - Submodule Configuration
 
 ### Current Setup
 
@@ -41,7 +41,7 @@ Branch: main
 
 ---
 
-## Developer Workflows
+## SECTION 03 - Developer Workflows
 
 ### After Cloning governance-docs-site
 
@@ -100,7 +100,7 @@ git log -1 --oneline
 
 ---
 
-## Important Rules
+## SECTION 04 - Important Rules
 
 ### ✅ DO
 
@@ -120,7 +120,7 @@ git log -1 --oneline
 
 ---
 
-## Synchronization Procedures
+## SECTION 05 - Synchronization Procedures
 
 ### Standard Update Cycle (After Framework Changes)
 
@@ -164,7 +164,7 @@ git submodule update --remote framework  # Reset to remote
 
 ---
 
-## Portal Documentation (docs/ folder)
+## SECTION 06 - Portal Documentation (docs/ folder)
 
 The `governance-docs-site/docs/` folder contains portal-specific Docusaurus content NOT synced from the submodule.
 
@@ -179,7 +179,7 @@ This includes:
 
 ---
 
-## Phase 2 Status
+## SECTION 07 - Phase 2 Status
 
 - ✅ Submodule configured in governance-docs-site
 - ✅ Framework directory now a submodule (not duplicate files)
@@ -190,7 +190,7 @@ This includes:
 
 ---
 
-## Reference Commits
+## SECTION 08 - Reference Commits
 
 | Date         | Commit  | Description                                        |
 | ------------ | ------- | -------------------------------------------------- |
@@ -199,7 +199,7 @@ This includes:
 
 ---
 
-## Questions or Issues
+## SECTION 09 - Questions or Issues
 
 - **Submodule not initializing?** Use `git submodule update --init --recursive`
 - **Divergence detected?** Run emergency re-sync procedure above

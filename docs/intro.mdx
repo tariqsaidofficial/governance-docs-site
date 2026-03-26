@@ -1,0 +1,102 @@
+---
+title: Guides Overview
+sidebar_label: Guides Overview
+slug: /guides
+description: Central navigation page for EATGF guides, references, learning paths, and implementation resources.
+---
+
+import DocMetaStrip from '@site/src/components/docs/DocMetaStrip';
+import DocCardGrid from '@site/src/components/docs/DocCardGrid';
+import DocCard from '@site/src/components/docs/DocCard';
+import DocSectionHeader from '@site/src/components/docs/DocSectionHeader';
+import DocNextSteps from '@site/src/components/docs/DocNextSteps';
+import DocCallout from '@site/src/components/docs/DocCallout';
+
+<DocMetaStrip items={[
+  { label: 'Baseline', value: 'v1.1 — Production' },
+  { label: 'Type', value: 'Vendor-Neutral · Audit-Defensible' },
+  { label: 'Standards', value: 'ISO 27001 · ISO 42001 · NIST SP 800-218 · COBIT 2019 · OWASP' },
+]} />
+
+The **Enterprise AI-Aligned Technical Governance Framework (EATGF)** is a vendor-neutral, audit-defensible governance standard for technical and AI governance programs.
+
+<DocSectionHeader number="01" label="Quick Navigation" description="Select a guide area based on your immediate objective." />
+
+
+<DocCardGrid cols={2}>
+  <DocCard title="Implementation Guides" description="Run deterministic evaluations and set up workflows." href="./quick-start" />
+  <DocCard title="Engine and Evidence" description="Execute the engine and prepare valid evidence files." href="./engine" />
+  <DocCard title="Framework References" description="Understand model details and reference material." href="./whitepaper" />
+  <DocCard title="Policy and Control Library" description="Browse control definitions and governance artifacts." href="https://github.com/tariqsaidofficial/eatgf-framework" />
+</DocCardGrid>
+
+<DocSectionHeader number="02" label="Guides by Category" description="Organized by workflow stage and audience." />
+
+### Getting Started
+
+- [Quick Start](./quick-start)
+- [Engine Guide](./engine)
+- [Evidence Guide](./evidence-guide)
+
+### Core References
+
+- [Whitepaper v1.1](./whitepaper)
+- [Annex v1.1](./annex)
+- [Framework Repository](https://github.com/tariqsaidofficial/eatgf-framework)
+
+### Governance Foundation
+
+- [Governance Charter](https://github.com/tariqsaidofficial/eatgf-framework/blob/main/04_POLICY_LAYER/01_GOVERNANCE_CHARTER.md)
+- [Control Objectives](https://github.com/tariqsaidofficial/eatgf-framework/blob/main/02_CONTROL_ARCHITECTURE/CONTROL_OBJECTIVES.md)
+- [Risk Framework](https://github.com/tariqsaidofficial/eatgf-framework/blob/main/02_CONTROL_ARCHITECTURE/RISK_FRAMEWORK.md)
+- [Maturity Assessment](https://github.com/tariqsaidofficial/eatgf-framework/blob/main/03_GOVERNANCE_MODELS/MATURITY_MODEL/MATURITY_ASSESSMENT.md)
+
+### Specialized Domains
+
+- [AI Governance](https://github.com/tariqsaidofficial/eatgf-framework/blob/main/05_DOMAIN_FRAMEWORKS/AI_GOVERNANCE_FRAMEWORK.md)
+- [API Governance](https://github.com/tariqsaidofficial/eatgf-framework/blob/main/05_DOMAIN_FRAMEWORKS/API_GOVERNANCE_FRAMEWORK.md)
+- [Data Governance Policy](https://github.com/tariqsaidofficial/eatgf-framework/blob/main/04_POLICY_LAYER/03_DATA_GOVERNANCE_POLICY.md)
+
+<DocSectionHeader number="03" label="Learning Paths by Role" description="Sequence of recommended guides for each role." />
+
+<DocCardGrid cols={3}>
+  <DocCard badge="Governance Leads" title="Strategy Path" description="Governance Charter → Control Objectives → Maturity Assessment" />
+  <DocCard badge="Engineers" title="Execution Path" description="Quick Start → Engine Guide → Evidence Guide" />
+  <DocCard badge="Security / Compliance" title="Assurance Path" description="Risk Framework → Control Objectives → Annex v1.1" />
+</DocCardGrid>
+
+<DocSectionHeader number="04" label="Popular and Recommended" />
+
+- **Most Used:** [Quick Start](./quick-start)
+- **Most Operational:** [Engine Guide](./engine)
+- **Most Validating:** [Evidence Guide](./evidence-guide)
+- **Most Strategic:** [Whitepaper v1.1](./whitepaper)
+
+<DocSectionHeader number="05" label="Framework Scope at a Glance" description="The operational v1.1 engine evaluates controls in EDM and DSS. The full framework structure spans additional domains for roadmap evolution." />
+
+| Domain | Focus | Key Controls |
+|---|---|---|
+| **EDM** | Evaluate, Direct, Monitor | Strategic governance and risk oversight |
+| **DSS** | Deliver, Service, Support | Operations, service continuity, incident response |
+| **MEA** | Monitor, Evaluate, Assess | Performance measurement and assurance readiness |
+
+<DocSectionHeader number="06" label="Support and Contribution" />
+
+<DocCallout type="info" title="Not sure where to start?">
+If your goal is execution, begin with [Quick Start](./quick-start). If your goal is governance design, begin with the [Governance Charter](https://github.com/tariqsaidofficial/eatgf-framework/blob/main/04_POLICY_LAYER/01_GOVERNANCE_CHARTER.md).
+</DocCallout>
+
+<DocCallout type="note" title="Contribute Improvements">
+Open documentation improvements and framework proposals in the [governance-docs-site repository](https://github.com/tariqsaidofficial/governance-docs-site) and [eatgf-framework repository](https://github.com/tariqsaidofficial/eatgf-framework).
+</DocCallout>
+
+<DocNextSteps steps={[
+  { label: 'Quick Start', href: './quick-start', description: 'Set up a deterministic EATGF v1.1 governance workflow.' },
+  { label: 'Engine Guide', href: './engine', description: 'Execute the engine evaluation pipeline.' },
+  { label: 'Evidence Guide', href: './evidence-guide', description: 'Validate evidence with correct status values.' },
+  { label: 'Control Objectives', href: 'https://github.com/tariqsaidofficial/eatgf-framework/blob/main/02_CONTROL_ARCHITECTURE/CONTROL_OBJECTIVES.md', description: 'Review control definitions and scope.' },
+]} />
+
+---
+
+[Framework Repository](https://github.com/tariqsaidofficial/eatgf-framework) · [Docs Site Repository](https://github.com/tariqsaidofficial/governance-docs-site)

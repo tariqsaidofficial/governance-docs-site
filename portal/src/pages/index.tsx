@@ -1,44 +1,22 @@
+/*
+ * File Purpose:
+ * Public home route entry for the portal.
+ * Composes the modular landing experience via a single LandingPage layout component.
+ */
 import type {ReactNode} from 'react';
-import clsx from 'clsx';
-import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
-import Heading from '@theme/Heading';
-
-import styles from './index.module.css';
-
-function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
-  return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
-        <Heading as="h1" className="hero__title">
-          {siteConfig.title}
-        </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/framework">
-            Explore the Framework
-          </Link>
-        </div>
-      </div>
-    </header>
-  );
-}
+import {LandingPage} from '@site/src/components/landing';
 
 export default function Home(): ReactNode {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
-      <HomepageHeader />
-      <main>
-        <HomepageFeatures />
-      </main>
+      noFooter
+      wrapperClassName="landing-shell"
+      title={siteConfig.title}
+      description="EATGF Portal - run deterministic compliance assessments and explore the governance framework.">
+      <LandingPage />
     </Layout>
   );
 }

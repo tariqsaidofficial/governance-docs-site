@@ -1,0 +1,70 @@
+---
+slug: /annex
+sidebar_position: 13
+title: Annex v1.1
+sidebar_label: Annex
+description: Canonical implementation support reference for interpretation boundaries, mapping context, and operational assumptions.
+---
+
+import DocMetaStrip from '@site/src/components/docs/DocMetaStrip';
+import DocCardGrid from '@site/src/components/docs/DocCardGrid';
+import DocCard from '@site/src/components/docs/DocCard';
+import DocSectionHeader from '@site/src/components/docs/DocSectionHeader';
+import DocChecklist, { DocChecklistItem } from '@site/src/components/docs/DocChecklist';
+import DocCallout from '@site/src/components/docs/DocCallout';
+import DocNextSteps from '@site/src/components/docs/DocNextSteps';
+
+<DocMetaStrip items={[
+	{ label: 'Artifact', value: 'Annex v1.1' },
+	{ label: 'Role', value: 'Implementation Support Reference' },
+	{ label: 'Authority', value: 'Canonical source remains in framework repository' },
+]} />
+
+The official EATGF Annex v1.1 is published in the framework repository.
+
+<DocCardGrid cols={2}>
+	<DocCard title="Canonical Source" description="Primary reference used for implementation interpretation and operational assumptions." href="https://github.com/tariqsaidofficial/eatgf-framework/blob/main/docs/annex_v1.1.md" />
+	<DocCard title="Framework Repository" description="Browse the source repository for surrounding governance context and version history." href="https://github.com/tariqsaidofficial/eatgf-framework" />
+</DocCardGrid>
+
+<DocSectionHeader number="01" label="Purpose and Position" description="Portal entry point for implementation-level guidance that complements the strategic whitepaper." />
+
+This page is the portal entry point for implementation-level guidance that complements the whitepaper.
+
+<DocSectionHeader number="02" label="Scope" description="The annex provides implementation support detail for the following areas." />
+
+- Control interpretation
+- Mapping context
+- Governance operational boundaries
+- Usage assumptions for baseline adoption
+
+<DocSectionHeader number="03" label="Recommended Reading Flow" description="Use the annex alongside the operational and strategic references below." />
+
+1. [Whitepaper v1.1](./whitepaper)
+2. [Evidence Guide](./evidence-guide)
+3. [Engine Guide](./engine)
+
+<DocSectionHeader number="04" label="Practical Use Cases" description="Where this annex becomes directly useful during implementation." />
+
+- Clarifying implementation boundaries for delivery teams
+- Translating control language into operational context
+- Supporting evidence design and assessment preparation
+- Cross-checking assumptions before compliance evaluation
+
+<DocSectionHeader number="05" label="Validation Checklist" description="Confirm interpretation and evidence assumptions before execution." />
+
+<DocChecklist label="Readiness checks">
+	<DocChecklistItem>Canonical annex link reachable</DocChecklistItem>
+	<DocChecklistItem>Control interpretation assumptions reviewed</DocChecklistItem>
+	<DocChecklistItem>Evidence expectations aligned with operational use</DocChecklistItem>
+</DocChecklist>
+
+<DocCallout type="note" title="Implementation alignment">
+Use this annex with [Evidence Guide](./evidence-guide) before running final compliance evaluation in [Engine Guide](./engine).
+</DocCallout>
+
+<DocNextSteps steps={[
+	{ label: 'Whitepaper v1.1', href: './whitepaper', description: 'Use the strategic model before applying implementation interpretation.' },
+	{ label: 'Evidence Guide', href: './evidence-guide', description: 'Translate annex assumptions into evidence structure and status quality.' },
+	{ label: 'Engine Guide', href: './engine', description: 'Run the operational evaluation after interpretation assumptions are settled.' },
+]} />

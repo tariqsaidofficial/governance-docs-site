@@ -1,0 +1,220 @@
+/* File Purpose: Styles the Core Pillars bento grid section and card visual hierarchy. */
+.section {
+  padding: 5rem 0;
+  background: var(--eatgf-surface);
+}
+
+.headingRow {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-bottom: 3rem;
+}
+
+@media screen and (min-width: 997px) {
+  .headingRow {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+}
+
+.eyebrow {
+  margin: 0 0 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: var(--eatgf-primary);
+}
+
+.title {
+  margin: 0;
+  font-family: var(--eatgf-font-headline);
+  font-size: clamp(2rem, 4vw, 2.6rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--eatgf-ink);
+}
+
+.lead {
+  margin: 0;
+  max-width: 34rem;
+  color: var(--eatgf-muted-ink);
+  line-height: 1.8;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media screen and (min-width: 997px) {
+  .grid {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+
+  .card:nth-child(1),
+  .card:nth-child(2),
+  .aiCard {
+    grid-column: span 4;
+  }
+
+  .wideCard {
+    grid-column: span 6;
+  }
+}
+
+.card,
+.wideCard {
+  display: block;
+  border-radius: 0.7rem;
+  padding: 1.7rem;
+  border: 1px solid var(--eatgf-outline-soft);
+  background: var(--eatgf-surface-high);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.card:hover,
+.wideCard:hover,
+.aiCard:hover {
+  text-decoration: none;
+  color: inherit;
+  transform: none;
+  box-shadow: 0 10px 22px color-mix(in srgb, var(--eatgf-ink) 5%, transparent);
+  border-color: color-mix(in srgb, var(--eatgf-primary) 22%, transparent);
+}
+
+.card h4,
+.wideCard h4,
+.aiCard h4 {
+  margin: 0 0 0.7rem;
+  font-family: var(--eatgf-font-headline);
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--eatgf-ink);
+}
+
+.card p,
+.wideCard p {
+  margin: 0;
+  color: var(--eatgf-muted-ink);
+  line-height: 1.7;
+  font-size: 0.92rem;
+}
+
+.iconWrap,
+.iconWrapTertiary,
+.iconWrapNeutral,
+.iconWrapError,
+.aiIconWrap {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.6rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.4rem;
+}
+
+.iconWrap {
+  background: color-mix(in srgb, var(--eatgf-primary) 14%, transparent);
+  color: var(--eatgf-primary);
+}
+
+.iconWrapTertiary {
+  background: color-mix(in srgb, var(--eatgf-tertiary) 16%, transparent);
+  color: var(--eatgf-tertiary);
+}
+
+.iconWrapNeutral {
+  background: var(--eatgf-surface-mid);
+  color: var(--eatgf-muted-ink);
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.iconWrapError {
+  background: color-mix(in srgb, #9f403d 16%, transparent);
+  color: #9f403d;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.cardLink,
+.cardLinkTertiary,
+.aiLink {
+  margin-top: 1.35rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.84rem;
+  font-weight: 800;
+}
+
+.cardLink {
+  color: var(--eatgf-primary);
+}
+
+.cardLinkTertiary {
+  color: var(--eatgf-tertiary);
+}
+
+.aiCard {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  border-radius: 0.7rem;
+  padding: 1.7rem;
+  text-decoration: none;
+  border: 1px solid color-mix(in srgb, var(--eatgf-outline-soft) 82%, transparent);
+  background: color-mix(in srgb, var(--eatgf-ink) 94%, black 6%);
+  color: var(--ifm-background-surface-color);
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.aiContent {
+  position: relative;
+  z-index: 1;
+}
+
+.aiIconWrap {
+  margin-bottom: 1.4rem;
+  background: color-mix(in srgb, var(--eatgf-primary) 20%, transparent);
+  color: color-mix(in srgb, var(--eatgf-primary) 50%, white 50%);
+  border: 1px solid color-mix(in srgb, var(--eatgf-primary) 32%, transparent);
+}
+
+.aiCard h4 {
+  color: var(--ifm-background-surface-color);
+}
+
+.aiCard p {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: color-mix(in srgb, var(--ifm-background-surface-color) 80%, transparent);
+}
+
+.aiLink {
+  color: color-mix(in srgb, var(--eatgf-primary) 54%, white 46%);
+}
+
+.aiDecoration {
+  position: absolute;
+  top: 0.8rem;
+  right: 0.8rem;
+  width: 7rem;
+  height: 7rem;
+  opacity: 0.12;
+}
+
+.wideInner {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}

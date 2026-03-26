@@ -1,0 +1,109 @@
+.section {
+  width: min(1200px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 0.75rem 0 1rem;
+}
+
+.header {
+  max-width: 760px;
+  margin-bottom: 1.15rem;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2rem;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--eatgf-outline-soft) 90%, transparent);
+  background: color-mix(in srgb, var(--eatgf-surface-low) 80%, white);
+  color: var(--eatgf-muted-ink);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.title {
+  margin: 0.9rem 0 0;
+  font-family: var(--eatgf-font-headline);
+  font-size: clamp(1.65rem, 2.8vw, 2.3rem);
+  line-height: 1.04;
+  letter-spacing: -0.035em;
+}
+
+.frame {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid color-mix(in srgb, var(--eatgf-outline-soft) 88%, transparent);
+  border-radius: var(--eatgf-radius-card);
+  background: linear-gradient(180deg, color-mix(in srgb, var(--eatgf-surface-high) 96%, white), color-mix(in srgb, var(--eatgf-surface-low) 84%, white));
+}
+
+.lane {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.laneHeader {
+  padding-top: 0.7rem;
+  font-family: var(--eatgf-font-headline);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--eatgf-muted-ink);
+}
+
+.nodes {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.node {
+  padding: 1rem;
+  border: 1px solid color-mix(in srgb, var(--eatgf-outline-soft) 90%, transparent);
+  border-radius: var(--eatgf-radius-card);
+  background: var(--eatgf-surface-high);
+}
+
+.nodePrimary {
+  border-color: color-mix(in srgb, var(--eatgf-primary) 22%, transparent);
+  background: color-mix(in srgb, var(--eatgf-primary) 7%, white);
+}
+
+.nodeTitle {
+  margin: 0;
+  font-family: var(--eatgf-font-headline);
+  font-size: 1rem;
+}
+
+.nodeDescription {
+  margin: 0.45rem 0 0;
+  color: var(--eatgf-muted-ink);
+  line-height: 1.65;
+}
+
+@media (max-width: 996px) {
+  .lane {
+    grid-template-columns: 1fr;
+  }
+
+  .nodes {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .section {
+    width: min(1200px, calc(100% - 1.25rem));
+  }
+
+  .frame {
+    padding: 0.85rem;
+  }
+}

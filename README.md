@@ -56,7 +56,7 @@
 }
 ```
 
-## Installation
+## SECTION 01 - Installation
 
 ### Prerequisites
 
@@ -137,7 +137,7 @@ Documentation is synced from the main repository:
 3. Run `npm start` to preview
 4. Deploy when ready
 
-## Deployment
+## SECTION 02 - Deployment
 
 ### GitHub Pages
 
@@ -192,7 +192,7 @@ docker run -p 3000:3000 governance-docs-site
 
 ---
 
-## Related Projects
+## SECTION 03 - Related Projects
 
 | Repository | Role | Status |
 |---|---|---|

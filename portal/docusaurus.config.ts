@@ -5,12 +5,12 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'EATGF Governance Portal',
-  tagline: 'Enterprise AI-Aligned Technical Governance Framework',
+  title: 'EATGF Portal',
+  tagline: 'Deterministic compliance assessment for AI-aligned technical governance.',
   favicon: 'img/favicon.ico',
 
   markdown: {
-    format: 'md',
+    format: 'detect',
   },
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -97,7 +97,7 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'EATGF Governance Portal',
+      title: 'EATGF Portal',
       logo: {
         alt: 'EATGF Logo',
         src: 'img/logo.svg',
@@ -108,7 +108,7 @@ const config: Config = {
           docsPluginId: 'guides',
           sidebarId: 'docsSidebar',
           position: 'left',
-          label: 'Getting Started',
+          label: 'Guides',
         },
         {
           type: 'docSidebar',
@@ -116,8 +116,7 @@ const config: Config = {
           position: 'left',
           label: 'Framework',
         },
-        {to: '/assess', label: 'Assessment', position: 'left'},
-        {to: '/blog', label: 'Blog', position: 'left'},
+        {to: '/assess', label: 'Project Assessment', position: 'left'},
         {
           href: 'https://github.com/tariqsaidofficial/eatgf-framework',
           label: 'GitHub',
@@ -129,42 +128,58 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Framework',
           items: [
             {
-              label: 'Framework',
+              label: 'Framework Overview',
               to: '/framework',
             },
-          ],
-        },
-        {
-          title: 'Community',
-          items: [
             {
-              label: 'GitHub Discussions',
-              href: 'https://github.com/tariqsaidofficial/eatgf-framework/discussions',
+              label: 'Whitepaper',
+              to: '/docs/whitepaper',
             },
             {
-              label: 'Issues',
-              href: 'https://github.com/tariqsaidofficial/eatgf-framework/issues',
+              label: 'Annex',
+              to: '/docs/annex',
             },
           ],
         },
         {
-          title: 'More',
+          title: 'Assessment',
           items: [
             {
-              label: 'Blog',
-              to: '/blog',
+              label: 'Project Assessment',
+              to: '/assess',
+            },
+            {
+              label: 'Quick Start',
+              to: '/docs/quick-start',
+            },
+            {
+              label: 'Evidence Guide',
+              to: '/docs/evidence-guide',
+            },
+          ],
+        },
+        {
+          title: 'Project',
+          items: [
+            {
+              label: 'Engine Guide',
+              to: '/docs/engine',
             },
             {
               label: 'GitHub',
               href: 'https://github.com/tariqsaidofficial/eatgf-framework',
             },
+            {
+              label: 'Report an Issue',
+              href: 'https://github.com/tariqsaidofficial/eatgf-framework/issues',
+            },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} EATGF Project. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} EATGF Project.`,
     },
     prism: {
       theme: prismThemes.github,
