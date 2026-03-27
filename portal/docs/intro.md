@@ -30,8 +30,19 @@ EATGF maps to ISO 27001:2022, ISO 42001:2023, NIST SP 800-218, COBIT 2019, and O
 
 Navigate to the [Framework](/framework) section to explore the governance documentation.
 
-For portal code structure and frontend ownership rules, read the
-[UI Architecture Guide](./portal-ui-architecture-guide.md).
+The command also installs all necessary dependencies you need to run Docusaurus.
 
-For structural evolution history and versioned UI decisions, read the
-[UI Architecture Change Log](./portal-ui-architecture-change-log.md).
+## Start your site
+
+Run the development server:
+
+```bash
+cd my-website
+npm run start
+```
+
+The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
+
+The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at <http://localhost:3000/>.
+
+Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.

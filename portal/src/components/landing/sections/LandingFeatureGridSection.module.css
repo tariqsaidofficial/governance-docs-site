@@ -1,6 +1,0 @@
-/* File Purpose: Section-level styling for feature grid spacing and alignment. */
-.section {
-  padding: 0.5rem 0 1.8rem;
-  background: var(--eatgf-surface);
-  width: 100%;
-}
