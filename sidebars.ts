@@ -11,12 +11,13 @@ const sidebars: SidebarsConfig = {
   docsSidebar: [
     {
       type: 'category',
-      label: 'Getting Started',
+      label: 'Guides',
       items: [
         'intro',
         'quick-start',
         'engine',
         'evidence-guide',
+        'ui-mvp-blueprint',
         'whitepaper',
         'annex',
       ],

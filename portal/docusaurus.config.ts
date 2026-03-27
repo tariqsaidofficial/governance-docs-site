@@ -10,7 +10,7 @@ const config: Config = {
   favicon: 'img/favicon.ico',
 
   markdown: {
-    format: 'detect',
+    format: 'md',
   },
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -67,6 +67,8 @@ const config: Config = {
             '**/root_files*',
             '**/report1*',
             '**/report2*',
+            '**/ARCHITECTURE_AND_NAVIGATION*',
+            '**/HOW_TO_ADOPT*',
           ],
           remarkPlugins: [],
           rehypePlugins: [],
