@@ -5,3 +5,17 @@ export { default as DocChecklist, DocChecklistItem } from './DocChecklist';
 export { default as DocMetaStrip } from './DocMetaStrip';
 export { default as DocNextSteps } from './DocNextSteps';
 export { default as DocSectionHeader } from './DocSectionHeader';
+export {
+	GovBadge,
+	GovCallout,
+	GovCard,
+	GovChecklist,
+	GovCodePanel,
+	GovHero,
+	GovLinkGrid,
+	GovList,
+	GovMiniBadge,
+	GovPillarGrid,
+	GovSplit,
+	GovTitle,
+} from './GovernanceTemplate';
