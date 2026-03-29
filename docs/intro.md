@@ -36,7 +36,7 @@ Warning,
 # Introduction
 
 <GovHero
-badge={<GovBadge icon={Explore}>Documentation v2.4.0-stable</GovBadge>}
+badge={<GovBadge icon={Explore} variant="phase">Phase 1 · Documentation v2.4.0-stable</GovBadge>}
 title="Technical Governance Portal"
 description="Enterprise AI-Aligned Technical Governance Framework (EATGF) provides a deterministic, audit-defensible system for architecture controls, security policy, AI governance, and operational accountability."
 actions={[
@@ -47,11 +47,13 @@ actions={[
 
 ## Governance Core Principles
 
-<GovMiniBadge icon={AccountBalance}>Core Governance Layer</GovMiniBadge>
+<GovMiniBadge icon={AccountBalance} variant="domain">Core Governance Layer</GovMiniBadge>
 
 Our governance baseline applies three core principles to every model, policy, and technical deployment in the enterprise environment.
 
 ### Principle 1: Ethical AI Deployment
+
+<GovMiniBadge variant="section">Section 01</GovMiniBadge>
 
 <GovCard>
   <p>
@@ -80,6 +82,8 @@ Our governance baseline applies three core principles to every model, policy, an
 </GovCard>
 
 ### Principle 2: Algorithmic Transparency
+
+<GovMiniBadge variant="section">Section 02</GovMiniBadge>
 
 <GovCard>
   <p>
@@ -110,6 +114,8 @@ Our governance baseline applies three core principles to every model, policy, an
 </GovCard>
 
 ### Principle 3: Human-in-the-loop Systems
+
+<GovMiniBadge variant="section">Section 03</GovMiniBadge>
 
 <GovCard>
   <p>

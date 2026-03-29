@@ -4,6 +4,8 @@ import type { LucideIcon } from 'lucide-react';
 import { CheckCircle2 } from 'lucide-react';
 import styles from './GovernanceTemplate.module.css';
 
+type BadgeVariant = 'default' | 'phase' | 'section' | 'domain' | 'status';
+
 type Action = {
   href: string;
   label: string;
@@ -43,18 +45,42 @@ export function GovHero({
   );
 }
 
-export function GovBadge({ icon: Icon, children }: { icon?: LucideIcon; children: ReactNode }): ReactNode {
+const badgeVariantClass: Record<BadgeVariant, string> = {
+  default: styles.badgeDefault,
+  phase: styles.badgePhase,
+  section: styles.badgeSection,
+  domain: styles.badgeDomain,
+  status: styles.badgeStatus,
+};
+
+export function GovBadge({
+  icon: Icon,
+  children,
+  variant = 'default',
+}: {
+  icon?: LucideIcon;
+  children: ReactNode;
+  variant?: BadgeVariant;
+}): ReactNode {
   return (
-    <span className={styles.badge}>
+    <span className={clsx(styles.badge, badgeVariantClass[variant])}>
       {Icon && <Icon className={styles.icon} aria-hidden="true" />}
       {children}
     </span>
   );
 }
 
-export function GovMiniBadge({ icon: Icon, children }: { icon?: LucideIcon; children: ReactNode }): ReactNode {
+export function GovMiniBadge({
+  icon: Icon,
+  children,
+  variant = 'default',
+}: {
+  icon?: LucideIcon;
+  children: ReactNode;
+  variant?: BadgeVariant;
+}): ReactNode {
   return (
-    <span className={styles.miniBadge}>
+    <span className={clsx(styles.miniBadge, badgeVariantClass[variant])}>
       {Icon && <Icon className={styles.icon} aria-hidden="true" />}
       {children}
     </span>

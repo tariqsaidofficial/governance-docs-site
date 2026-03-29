@@ -46,6 +46,34 @@
   padding: 0.34rem 0.7rem;
 }
 
+.badgeDefault {
+  color: var(--eatgf-primary-dim);
+}
+
+.badgePhase {
+  color: #2f4f75;
+  background: color-mix(in srgb, #465f88 18%, white);
+  border-color: color-mix(in srgb, #465f88 30%, transparent);
+}
+
+.badgeSection {
+  color: #4b4a65;
+  background: color-mix(in srgb, #5d5c78 18%, white);
+  border-color: color-mix(in srgb, #5d5c78 28%, transparent);
+}
+
+.badgeDomain {
+  color: #2e5b43;
+  background: color-mix(in srgb, #2e7d5a 16%, white);
+  border-color: color-mix(in srgb, #2e7d5a 26%, transparent);
+}
+
+.badgeStatus {
+  color: #725300;
+  background: color-mix(in srgb, #d19f1c 17%, white);
+  border-color: color-mix(in srgb, #d19f1c 30%, transparent);
+}
+
 .miniBadge {
   display: inline-flex;
   align-items: center;
