@@ -2,120 +2,143 @@
 sidebar_label: Introduction
 ---
 
-# Welcome to Enterprise AI-Aligned Technical Governance Framework (EATGF)
+# Introduction
 
-The **Enterprise AI-Aligned Technical Governance Framework (EATGF)** is a vendor-neutral, audit-defensible governance standard that scales from startups to enterprises, with built-in alignment to AI systems and technical governance.
+<section class="tg-intro-hero">
+	<span class="tg-chip">Documentation v2.4.0-stable</span>
+	<h2>Technical Governance Portal</h2>
+	<p>
+		Enterprise AI-Aligned Technical Governance Framework (EATGF) provides a deterministic,
+		audit-defensible system for architecture controls, security policy, AI governance, and
+		operational accountability.
+	</p>
+	<div class="tg-intro-hero-actions">
+		<a class="button button--primary" href="./quick-start">Start with Quick Start</a>
+		<a class="button button--secondary" href="./engine">Open Engine Guide</a>
+	</div>
+</section>
 
-Current baseline in production: **v1.1**
+## Governance Core Principles
 
-## Quick Start
+Our governance baseline applies three core principles to every model, policy, and technical deployment in the enterprise environment.
 
-Get started in 3 steps:
+### Principle 1: Ethical AI Deployment
 
-1. **[Read the Quick Start](./quick-start.md)** - create valid input files and run the engine
-2. **[Read the Engine Guide](./engine.md)** - run deterministic compliance evaluation
-3. **[Read the Evidence Guide](./evidence-guide.md)** - avoid invalid statuses and input errors
+<div class="tg-card">
+	<p>
+		Ethical AI deployment enforces fairness constraints, risk-based safety rails, and controlled production behavior.
+		All high-impact AI workloads must prove policy alignment before release.
+	</p>
+	<div class="tg-list-grid">
+		<div>
+			<h4>Requirements</h4>
+			<ul>
+				<li>Bi-annual algorithmic bias audits with independent review.</li>
+				<li>Documented fallback mechanisms for non-deterministic outputs.</li>
+				<li>PII handling aligned to approved governance constraints.</li>
+			</ul>
+		</div>
+		<div class="tg-callout tg-callout-info">
+			<strong>Implementation Note</strong>
+			<p>
+				Models with risk score greater than 0.75 require manual ethics review prior to production token issuance.
+			</p>
+		</div>
+	</div>
+</div>
 
-## What's Included
+### Principle 2: Algorithmic Transparency
 
-### Framework Foundation
+<div class="tg-card">
+	<p>
+		Every high-impact decision must be traceable: model version, evidence context, and runtime metadata are retained for audit.
+	</p>
+	<div class="tg-code-panel">
+		<div class="tg-code-head">
+			<span>METADATA_EXTRACTOR.PY</span>
+			<span>PYTHON</span>
+		</div>
+		<pre><code>def log_decision_trace(context, model_id):
+		trace_id = generate_uuid()
+		registry.capture(trace_id, {
+				"timestamp": datetime.now(),
+				"weights_hash": model_id.sha256(),
+				"input_vector": context.anonymize()
+		})
+		return trace_id</code></pre>
+	</div>
+	<ul class="tg-checklist">
+		<li><strong>Feature Importance:</strong> SHAP or LIME values for critical predictions.</li>
+		<li><strong>Data Provenance:</strong> Lineage tracking for synthetic and real datasets.</li>
+		<li><strong>Version Control:</strong> Immutable deployment snapshots per release.</li>
+	</ul>
+	<div class="tg-callout tg-callout-warning">
+		<strong>Compliance Warning</strong>
+		<p>Missing Decision Trace IDs for automated rejection flows is a direct governance violation.</p>
+	</div>
+</div>
 
-- **Governance Charter** - Strategic direction and principles
-- **Control Objectives** - Detailed control definitions
-- **Maturity Model** - Assess and improve practices
-- **Risk Framework** - Identify and manage risks
-- **Performance Model** - Measure governance effectiveness
+### Principle 3: Human-in-the-loop Systems
 
-### Specialized Domains
-
-- **[AI Governance](https://github.com/tariqsaidofficial/eatgf-framework/blob/main/05_DOMAIN_FRAMEWORKS/AI_GOVERNANCE_FRAMEWORK.md)** - Manage AI/ML systems responsibly
-- **[API Governance](https://github.com/tariqsaidofficial/eatgf-framework/blob/main/05_DOMAIN_FRAMEWORKS/API_GOVERNANCE_FRAMEWORK.md)** - Secure API lifecycle
-- **[Data Governance](https://github.com/tariqsaidofficial/eatgf-framework/blob/main/04_POLICY_LAYER/03_DATA_GOVERNANCE_POLICY.md)** - Manage data as strategic asset
-
-### Framework Compliance
-
-- **COBIT 2019** - Core governance framework
-- **ISO 27001** - Information security
-- **ISO 42001** - AI management
-- **OWASP** - API security
-
-## Core References
-
-- [Whitepaper v1.1](./whitepaper.md)
-- [Annex v1.1](./annex.md)
-- [EATGF Engine](./engine.md)
-
-## Key Features
-
-**COBIT 2019 Aligned** - Uses industry-standard governance framework
-
-**Scalable** - Grows with your organization from startup to enterprise
-
-**Practical** - Real-world templates, checklists, and examples
-
-**Multi-Standard** - Maps to ISO 27001, ISO 38500, ISO 42001, OWASP
-
-**Risk-Based** - Prioritizes controls by impact and likelihood
-
-**Evidence-Ready** - Built-in compliance documentation templates
+<div class="tg-card">
+	<p>
+		Automation augments human authority. High-impact operations require approved human override and live intervention capability.
+	</p>
+	<div class="tg-pillars">
+		<article>
+			<h4>Human Oversight</h4>
+			<p>Real-time monitoring and case-level review workflows.</p>
+		</article>
+		<article>
+			<h4>Kill Switch</h4>
+			<p>Immediate halt for unsafe behavior or policy drift.</p>
+		</article>
+		<article>
+			<h4>Override Logs</h4>
+			<p>Immutable records for all interventions and approvals.</p>
+		</article>
+	</div>
+	<div class="tg-callout tg-callout-good">
+		<strong>Best Practice</strong>
+		<p>
+			Trigger human review automatically when output distribution drifts by more than 10% from baseline.
+		</p>
+	</div>
+</div>
 
 ## Framework Domains
 
-The operational v1.1 engine currently evaluates controls in **EDM** and **DSS**, while the full framework structure remains broader for roadmap evolution.
+The operational v1.1 engine currently evaluates controls in EDM and DSS, while the full framework structure remains broader for roadmap evolution.
 
-| Domain  | Focus                     | Key Controls                            |
-| ------- | ------------------------- | --------------------------------------- |
-| **EDM** | Evaluate, Direct, Monitor | Strategic governance, risk oversight    |
-| **DSS** | Deliver, Service, Support | Operations, security, incident response |
-| **MEA** | Monitor, Evaluate, Assess | Performance measurement, compliance     |
+| Domain | Focus | Key Controls |
+| --- | --- | --- |
+| EDM | Evaluate, Direct, Monitor | Strategic governance, risk oversight |
+| DSS | Deliver, Service, Support | Operations, security, incident response |
+| MEA | Monitor, Evaluate, Assess | Performance measurement, compliance |
 
-## Core Control Areas
+## Primary Navigation Paths
 
-1. **Architecture Controls** - System design and integration standards
-2. **Security Controls** - Identity, encryption, vulnerability management
-3. **AI Governance Controls** - Responsible AI development and deployment
-4. **API Governance Controls** - API lifecycle and security
-5. **Risk Management Controls** - Risk identification and mitigation
-6. **Performance Controls** - KPI definition and measurement
+<div class="tg-grid-links">
+	<a href="./quick-start">
+		<h4>Quick Start</h4>
+		<p>Create valid input files and run the engine workflow.</p>
+	</a>
+	<a href="./engine">
+		<h4>Engine Guide</h4>
+		<p>Execute deterministic compliance assessment end-to-end.</p>
+	</a>
+	<a href="./evidence-guide">
+		<h4>Evidence Guide</h4>
+		<p>Apply accepted statuses and evidence formatting rules.</p>
+	</a>
+	<a href="./whitepaper">
+		<h4>Whitepaper</h4>
+		<p>Understand strategic architecture and governance rationale.</p>
+	</a>
+</div>
 
-## Documentation Structure
+## Source of Truth
 
-- **Getting Started** - Introduction and quick-start guides
-- **Framework Documentation** - Detailed control and policy documents
-- **Implementation Guides** - Step-by-step setup by organization size
-- **Assessment Tools** - Maturity models and risk frameworks
-- **Evidence Templates** - Compliance documentation
+Source repository: https://github.com/tariqsaidofficial/eatgf-framework
 
-## Companion Repository
-
-**Source of Truth:** <https://github.com/tariqsaidofficial/eatgf-framework>
-
-This documentation site pulls from the authoritative source repository. For latest updates, visit the GitHub repo.
-
-## Common Questions
-
-**Q: How long does it take to implement?**
-A: Startup edition (2 weeks), SaaS edition (2-3 months), Enterprise edition (4-6 months)
-
-**Q: Do we need all these controls?**
-A: No - choose your edition and implement controls for your team size.
-
-**Q: Can we customize the framework?**
-A: Yes - these are guidelines. Tailor to your organization's specific needs.
-
-**Q: How do we measure success?**
-A: Use the maturity model and KPI dashboard to track progress quarterly.
-
-## Next Steps
-
-1. Read [Governance Charter](https://github.com/tariqsaidofficial/eatgf-framework/blob/main/04_POLICY_LAYER/01_GOVERNANCE_CHARTER.md)
-2. Review [Maturity Assessment](https://github.com/tariqsaidofficial/eatgf-framework/blob/main/03_GOVERNANCE_MODELS/MATURITY_MODEL/MATURITY_ASSESSMENT.md)
-3. Continue with [Quick Start](./quick-start.md)
-4. Review [Control Objectives](https://github.com/tariqsaidofficial/eatgf-framework/blob/main/02_CONTROL_ARCHITECTURE/CONTROL_OBJECTIVES.md)
-5. Run [Engine Guide](./engine.md)
-
----
-
-**Questions?**
-<governance@enterprise.com>
-GitHub: <https://github.com/tariqsaidofficial/eatgf-framework>
+This portal consumes and presents governance content from the authoritative framework repository.
