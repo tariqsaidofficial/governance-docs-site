@@ -18,6 +18,7 @@
 ### Problem Statement
 
 After content restoration in v1.4.0, all layer README files displayed raw folder names as page headings and sidebar items:
+
 - Sidebar showed: `00_FOUNDATION`, `01_MANAGEMENT_SYSTEMS`, `02_CONTROL_ARCHITECTURE`, etc.
 - Page H1 headings showed identically raw folder-name values
 - Guides sidebar showed full H1 title strings for `intro.md` and `quick-start.md` instead of short labels
@@ -30,23 +31,23 @@ The restored README files from git history used raw directory names as H1 titles
 
 #### Layer README Headings and sidebar_label (framework submodule)
 
-| File | H1 Before | H1 After | sidebar_label Added |
-|---|---|---|---|
-| `00_FOUNDATION/README.md` | `# 00_FOUNDATION` | `# Foundation` | `Foundation` |
-| `01_MANAGEMENT_SYSTEMS/README.md` | `# 01_MANAGEMENT_SYSTEMS` | `# Management Systems` | `Management Systems` |
-| `02_CONTROL_ARCHITECTURE/README.md` | `# 02_CONTROL_ARCHITECTURE` | `# Control Architecture` | `Control Architecture` |
-| `03_GOVERNANCE_MODELS/README.md` | `# 03_GOVERNANCE_MODELS` | `# Governance Models` | `Governance Models` |
-| `04_POLICY_LAYER/README.md` | `# 04_POLICY_LAYER` | `# Policy Layer` | `Policy Layer` |
-| `05_DOMAIN_FRAMEWORKS/README.md` | `# 05_DOMAIN_FRAMEWORKS` | `# Domain Frameworks` | `Domain Frameworks` |
-| `06_AUDIT_AND_ASSURANCE/README.md` | `# 06_AUDIT_AND_ASSURANCE` | `# Audit and Assurance` | `Audit and Assurance` |
+| File                                   | H1 Before                      | H1 After                    | sidebar_label Added       |
+| -------------------------------------- | ------------------------------ | --------------------------- | ------------------------- |
+| `00_FOUNDATION/README.md`              | `# 00_FOUNDATION`              | `# Foundation`              | `Foundation`              |
+| `01_MANAGEMENT_SYSTEMS/README.md`      | `# 01_MANAGEMENT_SYSTEMS`      | `# Management Systems`      | `Management Systems`      |
+| `02_CONTROL_ARCHITECTURE/README.md`    | `# 02_CONTROL_ARCHITECTURE`    | `# Control Architecture`    | `Control Architecture`    |
+| `03_GOVERNANCE_MODELS/README.md`       | `# 03_GOVERNANCE_MODELS`       | `# Governance Models`       | `Governance Models`       |
+| `04_POLICY_LAYER/README.md`            | `# 04_POLICY_LAYER`            | `# Policy Layer`            | `Policy Layer`            |
+| `05_DOMAIN_FRAMEWORKS/README.md`       | `# 05_DOMAIN_FRAMEWORKS`       | `# Domain Frameworks`       | `Domain Frameworks`       |
+| `06_AUDIT_AND_ASSURANCE/README.md`     | `# 06_AUDIT_AND_ASSURANCE`     | `# Audit and Assurance`     | `Audit and Assurance`     |
 | `07_REFERENCE_AND_EVOLUTION/README.md` | `# 07_REFERENCE_AND_EVOLUTION` | `# Reference and Evolution` | `Reference and Evolution` |
 
 #### Guides Docs sidebar_label (governance-docs-site/docs)
 
-| File | H1 (unchanged) | sidebar_label Added |
-|---|---|---|
-| `docs/intro.md` | `# Welcome to Enterprise AI-Aligned Technical Governance Framework (EATGF)` | `Introduction` |
-| `docs/quick-start.md` | `# Quick Start Guide – Enterprise AI-Aligned Technical Governance Framework (EATGF)` | `Quick Start` |
+| File                  | H1 (unchanged)                                                                       | sidebar_label Added |
+| --------------------- | ------------------------------------------------------------------------------------ | ------------------- |
+| `docs/intro.md`       | `# Welcome to Enterprise AI-Aligned Technical Governance Framework (EATGF)`          | `Introduction`      |
+| `docs/quick-start.md` | `# Quick Start Guide – Enterprise AI-Aligned Technical Governance Framework (EATGF)` | `Quick Start`       |
 
 #### Additional: Foundation README Restoration (part of this session)
 
@@ -65,19 +66,19 @@ Docusaurus 3.9.2 production build: **SUCCESS — zero broken links, zero errors*
 
 ### Commits (eatgf-framework)
 
-| Commit | Description |
-|---|---|
-| `9a070c0` | restore(foundation): restore README.md to full 81-line content from a01961a |
-| `6099790` | fix(foundation): add sidebar_label front matter |
-| `7bf7089` | fix(foundation): rename H1 from 00_FOUNDATION to Foundation |
+| Commit    | Description                                                                             |
+| --------- | --------------------------------------------------------------------------------------- |
+| `9a070c0` | restore(foundation): restore README.md to full 81-line content from a01961a             |
+| `6099790` | fix(foundation): add sidebar_label front matter                                         |
+| `7bf7089` | fix(foundation): rename H1 from 00_FOUNDATION to Foundation                             |
 | `a9d3dd1` | fix(layers 01-07): replace raw H1 headings + add sidebar_label across all layer READMEs |
 
 ### Commits (governance-docs-site)
 
-| Commit | Description |
-|---|---|
-| `53a468f` | fix(guides): add sidebar_label to intro.md and quick-start.md |
-| `bdb1849` | fix(framework): advance submodule — Foundation H1 fix |
+| Commit    | Description                                                    |
+| --------- | -------------------------------------------------------------- |
+| `53a468f` | fix(guides): add sidebar_label to intro.md and quick-start.md  |
+| `bdb1849` | fix(framework): advance submodule — Foundation H1 fix          |
 | `c13120e` | fix(framework): advance submodule — layers 01-07 heading fixes |
 
 ---
