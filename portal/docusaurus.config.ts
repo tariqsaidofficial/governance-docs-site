@@ -11,6 +11,7 @@ const config: Config = {
 
   markdown: {
     format: 'md',
+    mermaid: true,
   },
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -96,6 +97,8 @@ const config: Config = {
       } satisfies Preset.Options,
     ],
   ],
+
+  themes: ['@docusaurus/theme-mermaid'],
 
   plugins: [
     [
