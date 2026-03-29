@@ -1,21 +1,27 @@
 {
   "name": "EATGF Knowledge Centre",
   "short_name": "EATGF portal",
+  "description": "Deterministic compliance assessment for AI-aligned technical governance.",
   "theme_color": "#0d9488",
   "background_color": "#ffffff",
   "display": "standalone",
   "scope": "/",
-  "start_url": "/",
+  "start_url": "/?source=pwa",
   "icons": [
     {
-      "src": "/img/docusaurus.png",
+      "src": "/img/pwa-192x192.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     },
     {
-      "src": "/img/docusaurus.png",
+      "src": "/img/pwa-512x512.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     }
-  ]
+  ],
+  "categories": ["business", "productivity", "utilities"],
+  "lang": "en",
+  "dir": "ltr"
 }

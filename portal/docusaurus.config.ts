@@ -107,12 +107,13 @@ const config: Config = {
         debug: true,
         offlineModeActivationStrategies: ['appInstalled', 'standalone', 'queryString'],
         pwaHead: [
-          { tagName: 'link', rel: 'icon', href: '/img/docusaurus.png' },
+          { tagName: 'link', rel: 'icon', href: '/img/pwa-192x192.png' },
           { tagName: 'link', rel: 'manifest', href: '/manifest.json' },
           { tagName: 'meta', name: 'theme-color', content: '#0d9488' },
           { tagName: 'meta', name: 'apple-mobile-web-app-capable', content: 'yes' },
-          { tagName: 'meta', name: 'apple-mobile-web-app-status-bar-style', content: '#000' },
-          { tagName: 'link', rel: 'apple-touch-icon', href: '/img/docusaurus.png' }
+          { tagName: 'meta', name: 'apple-mobile-web-app-status-bar-style', content: 'default' },
+          { tagName: 'meta', name: 'mobile-web-app-capable', content: 'yes' },
+          { tagName: 'link', rel: 'apple-touch-icon', href: '/img/apple-touch-icon.png' }
         ],
       },
     ],
