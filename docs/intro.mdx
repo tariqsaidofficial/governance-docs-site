@@ -3,40 +3,39 @@ sidebar_label: Introduction
 ---
 
 import {
-GovBadge,
-GovCallout,
-GovCard,
-GovChecklist,
-GovCodePanel,
-GovHero,
-GovLinkGrid,
-GovList,
-GovMiniBadge,
-GovPillarGrid,
-GovSplit,
-GovTitle,
+  GovBadge,
+  GovCallout,
+  GovCard,
+  GovChecklist,
+  GovCodePanel,
+  GovHero,
+  GovLinkGrid,
+  GovList,
+  GovMiniBadge,
+  GovPillarGrid,
+  GovSplit,
+  GovTitle,
 } from '@site/src/components/docs';
 
 import {
-AccountBalance,
-Emergency,
-Explore,
-Info,
-Inventory2,
-Lightbulb,
-Memory,
-MenuBook,
-Rocket,
-TaskAlt,
-VerifiedUser,
-Visibility,
-Warning,
+  AlertTriangle,
+  BookOpenText,
+  CheckCircle2,
+  Compass,
+  Eye,
+  Info,
+  Package,
+  Landmark,
+  Lightbulb,
+  Cpu,
+  Rocket,
+  ShieldCheck,
 } from 'lucide-react';
 
 # Introduction
 
 <GovHero
-badge={<GovBadge icon={Explore} variant="phase">Phase 1 · Documentation v2.4.0-stable</GovBadge>}
+badge={<GovBadge icon={Compass} variant="phase">Phase 1 · Documentation v2.4.0-stable</GovBadge>}
 title="Technical Governance Portal"
 description="Enterprise AI-Aligned Technical Governance Framework (EATGF) provides a deterministic, audit-defensible system for architecture controls, security policy, AI governance, and operational accountability."
 actions={[
@@ -47,7 +46,7 @@ actions={[
 
 ## Governance Core Principles
 
-<GovMiniBadge icon={AccountBalance} variant="domain">Core Governance Layer</GovMiniBadge>
+<GovMiniBadge icon={Landmark} variant="domain">Core Governance Layer</GovMiniBadge>
 
 Our governance baseline applies three core principles to every model, policy, and technical deployment in the enterprise environment.
 
@@ -63,7 +62,7 @@ Our governance baseline applies three core principles to every model, policy, an
   <GovSplit
     left={
       <>
-        <GovTitle icon={TaskAlt}>Requirements</GovTitle>
+        <GovTitle icon={CheckCircle2}>Requirements</GovTitle>
         <GovList
           items={[
             'Bi-annual algorithmic bias audits with independent review.',
@@ -92,14 +91,17 @@ Our governance baseline applies three core principles to every model, policy, an
   <GovCodePanel
     label="METADATA_EXTRACTOR.PY"
     language="PYTHON"
-    code={`def log_decision_trace(context, model_id):
-  trace_id = generate_uuid()
-  registry.capture(trace_id, {
-      "timestamp": datetime.now(),
-      "weights_hash": model_id.sha256(),
-      "input_vector": context.anonymize()
-  })
-  return trace_id`}
+    code={`import hashlib, uuid
+from datetime import datetime, timezone
+
+def log_decision_trace(model_id: str, input_hash: str) -> str:
+    trace_id = str(uuid.uuid4())
+    registry.capture(trace_id, {
+        "timestamp": datetime.now(timezone.utc).isoformat(),
+        "weights_hash": hashlib.sha256(model_id.encode()).hexdigest(),
+        "input_hash": hashlib.sha256(input_hash.encode()).hexdigest(),
+    })
+    return trace_id`}
   />
   <GovChecklist
     items={[
@@ -108,7 +110,7 @@ Our governance baseline applies three core principles to every model, policy, an
       <><strong>Version Control:</strong> Immutable deployment snapshots per release.</>,
     ]}
   />
-  <GovCallout type="warning" icon={Warning} title="Compliance Warning">
+  <GovCallout type="warning" icon={AlertTriangle} title="Compliance Warning">
     Missing Decision Trace IDs for automated rejection flows is a direct governance violation.
   </GovCallout>
 </GovCard>
@@ -124,17 +126,17 @@ Our governance baseline applies three core principles to every model, policy, an
   <GovPillarGrid
     items={[
       {
-        icon: Visibility,
+        icon: Eye,
         title: 'Human Oversight',
         description: 'Real-time monitoring and case-level review workflows.',
       },
       {
-        icon: Emergency,
+        icon: AlertTriangle,
         title: 'Kill Switch',
         description: 'Immediate halt for unsafe behavior or policy drift.',
       },
       {
-        icon: Inventory2,
+        icon: Package,
         title: 'Override Logs',
         description: 'Immutable records for all interventions and approvals.',
       },
@@ -169,25 +171,25 @@ icon: Rocket,
 href: './engine',
 title: 'Engine Guide',
 description: 'Execute deterministic compliance assessment end-to-end.',
-icon: Memory,
+icon: Cpu,
 },
 {
 href: './evidence-guide',
 title: 'Evidence Guide',
 description: 'Apply accepted statuses and evidence formatting rules.',
-icon: VerifiedUser,
+icon: ShieldCheck,
 },
 {
 href: './whitepaper',
 title: 'Whitepaper',
 description: 'Understand strategic architecture and governance rationale.',
-icon: MenuBook,
+icon: BookOpenText,
 },
 ]}
 />
 
 ## Source of Truth
 
-Source repository: <https://github.com/tariqsaidofficial/eatgf-framework>
+Source repository: [https://github.com/tariqsaidofficial/eatgf-framework](https://github.com/tariqsaidofficial/eatgf-framework)
 
 This portal consumes and presents governance content from the authoritative framework repository.

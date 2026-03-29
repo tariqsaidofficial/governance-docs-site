@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react';
 import clsx from 'clsx';
+import Link from '@docusaurus/Link';
 import type { LucideIcon } from 'lucide-react';
 import { CheckCircle2 } from 'lucide-react';
 import styles from './GovernanceTemplate.module.css';
@@ -26,18 +27,18 @@ export function GovHero({
   return (
     <section className={styles.hero}>
       {badge}
-      <h2 className={styles.heroTitle}>{title}</h2>
+      <p className={styles.heroTitle}>{title}</p>
       <p className={styles.heroDescription}>{description}</p>
       {!!actions?.length && (
         <div className={styles.heroActions}>
           {actions.map((action) => (
-            <a
+            <Link
               key={`${action.href}-${action.label}`}
               className={clsx('button', action.variant === 'secondary' ? 'button--secondary' : 'button--primary')}
-              href={action.href}
+              to={action.href}
             >
               {action.label}
-            </a>
+            </Link>
           ))}
         </div>
       )}
@@ -204,13 +205,13 @@ export function GovLinkGrid({
       {items.map((item) => {
         const Icon = item.icon;
         return (
-          <a key={item.href + item.title} href={item.href} className={styles.linkTile}>
+          <Link key={item.href + item.title} to={item.href} className={styles.linkTile}>
             <h4 className={styles.linkTileTitle}>
               {Icon && <Icon className={styles.icon} aria-hidden="true" />}
               {item.title}
             </h4>
             <p>{item.description}</p>
-          </a>
+          </Link>
         );
       })}
     </div>
