@@ -10,6 +10,43 @@
 
 ---
 
+## [1.4.0] — 2026-03-29
+
+**Change Type:** Major | **Initiated by:** Corrective Action — Full Framework Content Recovery
+**Scope:** eatgf-framework submodule — all governance layers (00–08)
+
+### Recovery Record — Complete Content Loss (cca1194 → cc805c6)
+
+**Root Cause:** Commit `122603e` ("Cleanup: Remove duplicate governance layer folders from root. Only eatgf-framework/ is canonical.") performed on February 18, 2026, destroyed all governance layer content within the `eatgf-framework` submodule — treating the canonical submodule as a duplicate of the root workspace. 98% of framework content (929KB+ across 141 files) was deleted in a single commit.
+
+**Discovery:** Forensic git audit comparing disk state against peak commit `a01961a` (February 16, 2026) confirmed 43 files completely absent and all 7 layer READMEs reduced to 19–35% of original content.
+
+**Impact Summary:**
+
+| Layer | Files Recovered | Key Content |
+|---|---|---|
+| 00_FOUNDATION | 10 | MASTER_CONTROL_MATRIX, document templates, architecture diagrams |
+| 01_MANAGEMENT_SYSTEMS | 4 | AIMS/ISMS manuals, SoA template |
+| 02_CONTROL_ARCHITECTURE | 7 | Control objectives, framework mappings, risk framework |
+| 03_GOVERNANCE_MODELS | 4 | Team-size governance, maturity assessment, performance model |
+| 04_POLICY_LAYER | 12 | 8 domain policies + 2 governance policies + charter |
+| 05_DOMAIN_FRAMEWORKS | 3 | AI governance, API governance, domain frameworks |
+| 06_AUDIT_AND_ASSURANCE | 6 | 5 audit standards |
+| 07_REFERENCE_AND_EVOLUTION | 15 | Roadmaps, evolution history, decision records |
+| 08_DEVELOPER_GOVERNANCE | 80 | SDLC, API, DevSecOps, Cloud/SaaS, App Lifecycle, Framework Profiles |
+
+**Restoration Sources:**
+- Layers 01–07 and 00_FOUNDATION: `git ls-tree` at commit `a01961a` (Feb 16, 2026)
+- Layer 08 and additional 00_FOUNDATION files: `git ls-tree` at commit `cca1194` (pre-cleanup)
+- Two missing appendix files: restored from commit `2efba9b`
+- `04_INFRASTRUCTURE_RUNTIME/README.md`: created new (never existed in history)
+
+**Build Verification:** Docusaurus 3.9.2 full production build passes with zero broken links after restoration.
+
+**Framework Submodule Commit:** `cc805c6` — 141 files changed, 66,203 insertions.
+
+---
+
 ## [1.3.0] — 2026-03-28
 
 **Change Type:** Minor | **Initiated by:** Corrective Action — Post-Incident Recovery
