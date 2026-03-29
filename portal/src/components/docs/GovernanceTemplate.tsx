@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
+import CodeBlock from '@theme/CodeBlock';
 import type { LucideIcon } from 'lucide-react';
 import { CheckCircle2 } from 'lucide-react';
 import styles from './GovernanceTemplate.module.css';
@@ -147,15 +148,9 @@ export function GovCallout({
 
 export function GovCodePanel({ label, language, code }: { label: string; language: string; code: string }): ReactNode {
   return (
-    <div className={styles.codePanel}>
-      <div className={styles.codeHead}>
-        <span>{label}</span>
-        <span>{language}</span>
-      </div>
-      <pre>
-        <code>{code}</code>
-      </pre>
-    </div>
+    <CodeBlock language={language.toLowerCase()} title={label}>
+      {code}
+    </CodeBlock>
   );
 }
 
