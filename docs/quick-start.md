@@ -1,3 +1,7 @@
+---
+sidebar_label: Quick Start
+---
+
 # Quick Start Guide – Enterprise AI-Aligned Technical Governance Framework (EATGF)
 
 Get your EATGF v1.1 governance workflow running quickly with deterministic evaluation and evidence-ready outputs.

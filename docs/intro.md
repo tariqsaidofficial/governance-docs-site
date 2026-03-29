@@ -1,3 +1,7 @@
+---
+sidebar_label: Introduction
+---
+
 # Welcome to Enterprise AI-Aligned Technical Governance Framework (EATGF)
 
 The **Enterprise AI-Aligned Technical Governance Framework (EATGF)** is a vendor-neutral, audit-defensible governance standard that scales from startups to enterprises, with built-in alignment to AI systems and technical governance.
