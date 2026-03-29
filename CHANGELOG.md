@@ -10,6 +10,78 @@
 
 ---
 
+## [1.5.0] — 2026-03-29
+
+**Change Type:** Minor | **Initiated by:** Corrective Action — Sidebar and Heading Normalization
+**Scope:** All framework layer READMEs (00–07), Guides docs (intro.md, quick-start.md)
+
+### Problem Statement
+
+After content restoration in v1.4.0, all layer README files displayed raw folder names as page headings and sidebar items:
+- Sidebar showed: `00_FOUNDATION`, `01_MANAGEMENT_SYSTEMS`, `02_CONTROL_ARCHITECTURE`, etc.
+- Page H1 headings showed identically raw folder-name values
+- Guides sidebar showed full H1 title strings for `intro.md` and `quick-start.md` instead of short labels
+
+### Root Cause
+
+The restored README files from git history used raw directory names as H1 titles (e.g. `# 01_MANAGEMENT_SYSTEMS`). Docusaurus derives the sidebar item label from the H1 heading of the index page when no `sidebar_label` front matter is declared, overriding the `_category_.json` label for the index doc itself.
+
+### Changes Applied
+
+#### Layer README Headings and sidebar_label (framework submodule)
+
+| File | H1 Before | H1 After | sidebar_label Added |
+|---|---|---|---|
+| `00_FOUNDATION/README.md` | `# 00_FOUNDATION` | `# Foundation` | `Foundation` |
+| `01_MANAGEMENT_SYSTEMS/README.md` | `# 01_MANAGEMENT_SYSTEMS` | `# Management Systems` | `Management Systems` |
+| `02_CONTROL_ARCHITECTURE/README.md` | `# 02_CONTROL_ARCHITECTURE` | `# Control Architecture` | `Control Architecture` |
+| `03_GOVERNANCE_MODELS/README.md` | `# 03_GOVERNANCE_MODELS` | `# Governance Models` | `Governance Models` |
+| `04_POLICY_LAYER/README.md` | `# 04_POLICY_LAYER` | `# Policy Layer` | `Policy Layer` |
+| `05_DOMAIN_FRAMEWORKS/README.md` | `# 05_DOMAIN_FRAMEWORKS` | `# Domain Frameworks` | `Domain Frameworks` |
+| `06_AUDIT_AND_ASSURANCE/README.md` | `# 06_AUDIT_AND_ASSURANCE` | `# Audit and Assurance` | `Audit and Assurance` |
+| `07_REFERENCE_AND_EVOLUTION/README.md` | `# 07_REFERENCE_AND_EVOLUTION` | `# Reference and Evolution` | `Reference and Evolution` |
+
+#### Guides Docs sidebar_label (governance-docs-site/docs)
+
+| File | H1 (unchanged) | sidebar_label Added |
+|---|---|---|
+| `docs/intro.md` | `# Welcome to Enterprise AI-Aligned Technical Governance Framework (EATGF)` | `Introduction` |
+| `docs/quick-start.md` | `# Quick Start Guide – Enterprise AI-Aligned Technical Governance Framework (EATGF)` | `Quick Start` |
+
+#### Additional: Foundation README Restoration (part of this session)
+
+`00_FOUNDATION/README.md` was restored from 11-line stub to full 81-line authoritative content sourced from git commit `a01961a` (Feb 16, 2026). Content includes: Layer Purpose, full document inventory, role-based usage guide (Governance Leaders / Control Owners / Auditors / External Auditors), Authority Statement, and Version & Status section.
+
+### Prevention Rules
+
+1. All new layer README files must include `sidebar_label` front matter matching the `_category_.json` label
+2. H1 headings must use human-readable names — never raw directory names with numeric prefixes
+3. All Guides docs with H1 titles longer than 30 characters must declare `sidebar_label` in front matter
+4. After any content restoration from git history, run a heading audit before build
+
+### Build Verification
+
+Docusaurus 3.9.2 production build: **SUCCESS — zero broken links, zero errors** (verified after each fix)
+
+### Commits (eatgf-framework)
+
+| Commit | Description |
+|---|---|
+| `9a070c0` | restore(foundation): restore README.md to full 81-line content from a01961a |
+| `6099790` | fix(foundation): add sidebar_label front matter |
+| `7bf7089` | fix(foundation): rename H1 from 00_FOUNDATION to Foundation |
+| `a9d3dd1` | fix(layers 01-07): replace raw H1 headings + add sidebar_label across all layer READMEs |
+
+### Commits (governance-docs-site)
+
+| Commit | Description |
+|---|---|
+| `53a468f` | fix(guides): add sidebar_label to intro.md and quick-start.md |
+| `bdb1849` | fix(framework): advance submodule — Foundation H1 fix |
+| `c13120e` | fix(framework): advance submodule — layers 01-07 heading fixes |
+
+---
+
 ## [1.4.0] — 2026-03-29
 
 **Change Type:** Major | **Initiated by:** Corrective Action — Full Framework Content Recovery
@@ -23,19 +95,20 @@
 
 **Impact Summary:**
 
-| Layer | Files Recovered | Key Content |
-|---|---|---|
-| 00_FOUNDATION | 10 | MASTER_CONTROL_MATRIX, document templates, architecture diagrams |
-| 01_MANAGEMENT_SYSTEMS | 4 | AIMS/ISMS manuals, SoA template |
-| 02_CONTROL_ARCHITECTURE | 7 | Control objectives, framework mappings, risk framework |
-| 03_GOVERNANCE_MODELS | 4 | Team-size governance, maturity assessment, performance model |
-| 04_POLICY_LAYER | 12 | 8 domain policies + 2 governance policies + charter |
-| 05_DOMAIN_FRAMEWORKS | 3 | AI governance, API governance, domain frameworks |
-| 06_AUDIT_AND_ASSURANCE | 6 | 5 audit standards |
-| 07_REFERENCE_AND_EVOLUTION | 15 | Roadmaps, evolution history, decision records |
-| 08_DEVELOPER_GOVERNANCE | 80 | SDLC, API, DevSecOps, Cloud/SaaS, App Lifecycle, Framework Profiles |
+| Layer                      | Files Recovered | Key Content                                                         |
+| -------------------------- | --------------- | ------------------------------------------------------------------- |
+| 00_FOUNDATION              | 10              | MASTER_CONTROL_MATRIX, document templates, architecture diagrams    |
+| 01_MANAGEMENT_SYSTEMS      | 4               | AIMS/ISMS manuals, SoA template                                     |
+| 02_CONTROL_ARCHITECTURE    | 7               | Control objectives, framework mappings, risk framework              |
+| 03_GOVERNANCE_MODELS       | 4               | Team-size governance, maturity assessment, performance model        |
+| 04_POLICY_LAYER            | 12              | 8 domain policies + 2 governance policies + charter                 |
+| 05_DOMAIN_FRAMEWORKS       | 3               | AI governance, API governance, domain frameworks                    |
+| 06_AUDIT_AND_ASSURANCE     | 6               | 5 audit standards                                                   |
+| 07_REFERENCE_AND_EVOLUTION | 15              | Roadmaps, evolution history, decision records                       |
+| 08_DEVELOPER_GOVERNANCE    | 80              | SDLC, API, DevSecOps, Cloud/SaaS, App Lifecycle, Framework Profiles |
 
 **Restoration Sources:**
+
 - Layers 01–07 and 00_FOUNDATION: `git ls-tree` at commit `a01961a` (Feb 16, 2026)
 - Layer 08 and additional 00_FOUNDATION files: `git ls-tree` at commit `cca1194` (pre-cleanup)
 - Two missing appendix files: restored from commit `2efba9b`
