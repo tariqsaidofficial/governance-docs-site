@@ -102,6 +102,21 @@ const config: Config = {
 
   plugins: [
     [
+      '@docusaurus/plugin-pwa',
+      {
+        debug: true,
+        offlineModeActivationStrategies: ['appInstalled', 'standalone', 'queryString'],
+        pwaHead: [
+          { tagName: 'link', rel: 'icon', href: '/img/docusaurus.png' },
+          { tagName: 'link', rel: 'manifest', href: '/manifest.json' },
+          { tagName: 'meta', name: 'theme-color', content: '#0d9488' },
+          { tagName: 'meta', name: 'apple-mobile-web-app-capable', content: 'yes' },
+          { tagName: 'meta', name: 'apple-mobile-web-app-status-bar-style', content: '#000' },
+          { tagName: 'link', rel: 'apple-touch-icon', href: '/img/docusaurus.png' }
+        ],
+      },
+    ],
+    [
       '@docusaurus/plugin-content-docs',
       {
         id: 'guides',
