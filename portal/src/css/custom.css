@@ -310,6 +310,9 @@ h6 {
 
 .theme-doc-sidebar-container .menu__link:hover,
 .theme-doc-sidebar-container .menu__list-item-collapsible:hover {
+  background: color-mix(in srgb, var(--eatgf-primary) 6%, white);
+  color: var(--eatgf-ink);
+}
 
 /* Introduction page redesign extracted from approved governance HTML template. */
 .theme-doc-markdown .tg-intro-hero {
@@ -352,6 +355,35 @@ h6 {
   border: 1px solid color-mix(in srgb, var(--eatgf-primary) 22%, transparent);
   border-radius: var(--eatgf-radius-chip);
   padding: 0.34rem 0.7rem;
+}
+
+.theme-doc-markdown .tg-mini-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-bottom: 0.4rem;
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--eatgf-primary-dim);
+  background: color-mix(in srgb, var(--eatgf-primary) 11%, white);
+  border: 1px solid color-mix(in srgb, var(--eatgf-primary) 22%, transparent);
+  border-radius: var(--eatgf-radius-chip);
+  padding: 0.26rem 0.64rem;
+}
+
+.theme-doc-markdown .tg-inline-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95em;
+  line-height: 1;
+}
+
+.theme-doc-markdown .tg-item-icon {
+  display: inline-block;
+  min-width: 1.1rem;
+  color: var(--eatgf-primary-dim);
+  font-weight: 700;
 }
 
 .theme-doc-markdown .tg-intro-hero-actions {
@@ -519,9 +551,6 @@ h6 {
   .theme-doc-markdown .tg-grid-links {
     grid-template-columns: 1fr;
   }
-}
-  background: color-mix(in srgb, var(--eatgf-primary) 6%, white);
-  color: var(--eatgf-ink);
 }
 
 .theme-doc-sidebar-container .menu__link--active,
