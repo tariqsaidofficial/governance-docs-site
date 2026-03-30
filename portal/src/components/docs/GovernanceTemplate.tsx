@@ -1,7 +1,6 @@
 import type { ReactNode } from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
-import CodeBlock from '@theme/CodeBlock';
 import type { LucideIcon } from 'lucide-react';
 import { CheckCircle2 } from 'lucide-react';
 import styles from './GovernanceTemplate.module.css';
@@ -148,9 +147,15 @@ export function GovCallout({
 
 export function GovCodePanel({ label, language, code }: { label: string; language: string; code: string }): ReactNode {
   return (
-    <CodeBlock language={language.toLowerCase()} title={label}>
-      {code}
-    </CodeBlock>
+    <div className={styles.codePanel}>
+      <div className={styles.codeHead}>
+        <span>{label}</span>
+        <span>{language}</span>
+      </div>
+      <pre>
+        <code>{code}</code>
+      </pre>
+    </div>
   );
 }
 
@@ -178,10 +183,8 @@ export function GovPillarGrid({
         const Icon = item.icon;
         return (
           <article key={item.title} className={styles.pillar}>
-            <h4 className={styles.cardTitle}>
-              {Icon && <Icon className={styles.icon} aria-hidden="true" />}
-              {item.title}
-            </h4>
+            {Icon && <Icon className={styles.pillarIcon} aria-hidden="true" />}
+            <h4 className={styles.pillarTitle}>{item.title}</h4>
             <p>{item.description}</p>
           </article>
         );

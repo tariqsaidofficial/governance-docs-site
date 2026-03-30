@@ -202,7 +202,8 @@
 }
 
 .codePanel code {
-  font-size: 0.86rem;
+  font-size: 0.9rem;
+  line-height: 1.62;
   color: var(--eatgf-code-ink);
   white-space: pre;
 }
@@ -232,6 +233,22 @@
   background: var(--eatgf-surface-low);
   border-radius: 10px;
   padding: 0.8rem;
+}
+
+.pillarIcon {
+  width: 1.05rem;
+  height: 1.05rem;
+  color: var(--eatgf-primary-dim);
+  margin-bottom: 0.28rem;
+}
+
+.pillarTitle {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
 }
 
 .pillar p {
