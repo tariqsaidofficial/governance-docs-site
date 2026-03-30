@@ -3,39 +3,39 @@ sidebar_label: Quick Start
 ---
 
 import {
-  GovBadge,
-  GovCallout,
-  GovCard,
-  GovChecklist,
-  GovCodePanel,
-  GovHero,
-  GovLinkGrid,
-  GovList,
-  GovMiniBadge,
-  GovSplit,
-  GovTitle,
+GovBadge,
+GovCallout,
+GovCard,
+GovChecklist,
+GovCodePanel,
+GovHero,
+GovLinkGrid,
+GovList,
+GovMiniBadge,
+GovSplit,
+GovTitle,
 } from '@site/src/components/docs';
 
 import {
-  ClipboardList,
-  FileJson,
-  FolderOpen,
-  GitBranch,
-  ListChecks,
-  RotateCcw,
-  Terminal,
+ClipboardList,
+FileJson,
+FolderOpen,
+GitBranch,
+ListChecks,
+RotateCcw,
+Terminal,
 } from 'lucide-react';
 
 # Quick Start Guide
 
 <GovHero
-  badge={<GovBadge icon={Terminal} variant="phase">Phase-Based Execution · v1.1 Baseline</GovBadge>}
-  title="EATGF Quick Start"
-  description="Run deterministic compliance evaluation with evidence-ready outputs in three phases: setup, execution, and regression safety checks."
-  actions={[
-    { href: './engine', label: 'Open Engine Guide' },
-    { href: './evidence-guide', label: 'Open Evidence Guide', variant: 'secondary' },
-  ]}
+badge={<GovBadge icon={Terminal} variant="phase">Phase-Based Execution · v1.1 Baseline</GovBadge>}
+title="EATGF Quick Start"
+description="Run deterministic compliance evaluation with evidence-ready outputs in three phases: setup, execution, and regression safety checks."
+actions={[
+{ href: './engine', label: 'Open Engine Guide' },
+{ href: './evidence-guide', label: 'Open Evidence Guide', variant: 'secondary' },
+]}
 />
 
 ## Phase 1: Setup (30-45 min)
@@ -91,12 +91,12 @@ import {
     code={`python -m eatgf_engine.cli.main validate-registry registry_v1.1.json`}
   />
 
-  <GovTitle icon={GitBranch}>Step 5: Evaluate Compliance</GovTitle>
-  <GovCodePanel
-    label="EVALUATE_COMPLIANCE.SH"
-    language="bash"
-    code={`python -m eatgf_engine.cli.main evaluate-compliance registry_v1.1.json org_profile.json evidence.json --output-json compliance_report.json`}
-  />
+<GovTitle icon={GitBranch}>Step 5: Evaluate Compliance</GovTitle>
+<GovCodePanel
+label="EVALUATE_COMPLIANCE.SH"
+language="bash"
+code={`python -m eatgf_engine.cli.main evaluate-compliance registry_v1.1.json org_profile.json evidence.json --output-json compliance_report.json`}
+/>
 
   <GovCallout type="success" icon={ListChecks} title="Phase 2 Deliverable">
     Deterministic terminal output + compliance_report.json
@@ -126,26 +126,26 @@ python -m eatgf_engine.cli.main evaluate-compliance registry_v1.1.json org_profi
 ## Useful Links
 
 <GovLinkGrid
-  items={[
-    {
-      href: 'https://github.com/tariqsaidofficial/eatgf-engine',
-      title: 'EATGF Engine Repository',
-      description: 'Runtime engine, CLI workflows, and deterministic evaluator.',
-      icon: Terminal,
-    },
-    {
-      href: 'https://github.com/tariqsaidofficial/eatgf-framework',
-      title: 'EATGF Framework Repository',
-      description: 'Primary governance framework and control architecture baseline.',
-      icon: ClipboardList,
-    },
-    {
-      href: 'https://github.com/tariqsaidofficial/governance-docs-site',
-      title: 'Governance Docs Portal Repository',
-      description: 'Documentation portal source and Docusaurus implementation.',
-      icon: FolderOpen,
-    },
-  ]}
+items={[
+{
+href: 'https://github.com/tariqsaidofficial/eatgf-engine',
+title: 'EATGF Engine Repository',
+description: 'Runtime engine, CLI workflows, and deterministic evaluator.',
+icon: Terminal,
+},
+{
+href: 'https://github.com/tariqsaidofficial/eatgf-framework',
+title: 'EATGF Framework Repository',
+description: 'Primary governance framework and control architecture baseline.',
+icon: ClipboardList,
+},
+{
+href: 'https://github.com/tariqsaidofficial/governance-docs-site',
+title: 'Governance Docs Portal Repository',
+description: 'Documentation portal source and Docusaurus implementation.',
+icon: FolderOpen,
+},
+]}
 />
 
 <GovCallout type="info" icon={ListChecks} title="Scope Note">
