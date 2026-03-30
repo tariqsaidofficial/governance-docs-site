@@ -10,7 +10,7 @@ const config: Config = {
   favicon: 'img/favicon.ico',
 
   markdown: {
-    format: 'md',
+    format: 'detect',
     mermaid: true,
   },
 
